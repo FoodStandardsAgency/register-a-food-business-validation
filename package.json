@@ -1,0 +1,34 @@
+{
+  "name": "@slice-and-dice/register-a-food-business-validation",
+  "version": "1.0.0",
+  "description": "Validation functions for the register a food business service",
+  "main": "index.js",
+  "scripts": {
+    "format:verify": "prettier --list-different 'validationFunctions/**/*.js'",
+    "format": "prettier --write 'validationFunctions/**/*.js'",
+    "lint": "eslint ./validationFunctions",
+    "lint:fix": "eslint ./validationFunctions --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slice-and-dice/register-a-food-business-validation.git"
+  },
+  "author": "Django Shelton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slice-and-dice/register-a-food-business-validation/issues"
+  },
+  "homepage": "https://github.com/slice-and-dice/register-a-food-business-validation#readme",
+  "dependencies": {
+    "validator": "^10.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "jest": "^23.1.0",
+    "prettier": "^1.13.5"
+  }
+}
