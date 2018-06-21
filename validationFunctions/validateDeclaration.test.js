@@ -1,4 +1,4 @@
-const validateDeclaration = require('./validateDeclaration');
+const validateDeclaration = require("./validateDeclaration");
 
 describe("Function: validateDeclaration", () => {
   it("should return false if declaration is empty", () => {

@@ -1,4 +1,4 @@
-const validateTown = require('./validateTown');
+const validateTown = require("./validateTown");
 
 describe("Function: validateTown", () => {
   it("Should return false when type is not string", () => {

@@ -1,4 +1,4 @@
-const validateEstablishmentTradingName = require('./validateEstablishmentTradingName');
+const validateEstablishmentTradingName = require("./validateEstablishmentTradingName");
 
 describe("Function: validateEstablishmentTradingName", () => {
   it("Should return false if type is not string", () => {
