@@ -1,0 +1,23 @@
+{
+  "name": "@slice-and-dice/register-a-food-business-validation",
+  "version": "1.0.0",
+  "description": "Validation functions for the register a food business service",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slice-and-dice/register-a-food-business-validation.git"
+  },
+  "author": "Django Shelton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slice-and-dice/register-a-food-business-validation/issues"
+  },
+  "homepage": "https://github.com/slice-and-dice/register-a-food-business-validation#readme",
+  "dependencies": {
+    "jest": "^23.1.0"
+  }
+}
