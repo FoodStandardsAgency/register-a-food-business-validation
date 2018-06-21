@@ -1,4 +1,4 @@
-const validatePostCode = require("./validatePostode");
+const validatePostCode = require("./validatePostCode");
 
 describe("Function: validatePostCode", () => {
   it("should return false if type is not string", () => {
