@@ -4,6 +4,10 @@
   "description": "Validation functions for the register a food business service",
   "main": "index.js",
   "scripts": {
+    "format:verify": "prettier --list-different 'validationFunctions/**/*.js'",
+    "format": "prettier --write 'validationFunctions/**/*.js'",
+    "lint": "eslint ./validationFunctions",
+    "lint:fix": "eslint ./validationFunctions --fix",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -18,7 +22,13 @@
   },
   "homepage": "https://github.com/slice-and-dice/register-a-food-business-validation#readme",
   "dependencies": {
-    "jest": "^23.1.0",
     "validator": "^10.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "jest": "^23.1.0",
+    "prettier": "^1.13.5"
   }
 }
