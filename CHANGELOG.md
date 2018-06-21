@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.1.2 - 21st June 2018 (released)
+
+### Modified
+
+* Export postCode with capital C
+
 ## v1.1.1 - 21st June 2018 (released)
 
 ### Modified
