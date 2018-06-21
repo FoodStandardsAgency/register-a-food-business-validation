@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/slice-and-dice/register-a-food-business-validation#readme",
   "dependencies": {
-    "jest": "^23.1.0"
+    "jest": "^23.1.0",
+    "validator": "^10.4.0"
   }
 }
