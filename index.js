@@ -8,7 +8,7 @@ const validatePhoneNumberOptional = require("./validationFunctions/validatePhone
 const validatePostCode = require("./validationFunctions/validatePostCode");
 const validateStreet = require("./validationFunctions/validateStreet");
 const validateTown = require("./validationFunctions/validateTown");
-const validateCompanyName = require("./validationFunctions/validateTown");
+const validateCompanyName = require("./validationFunctions/validateCompanyName");
 
 module.exports = {
   validateDeclaration,
