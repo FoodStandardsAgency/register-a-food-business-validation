@@ -10,6 +10,7 @@ const validateStreet = require("./validationFunctions/validateStreet");
 const validateTown = require("./validationFunctions/validateTown");
 const validateCompanyName = require("./validationFunctions/validateCompanyName");
 const validateOperatorType = require("./validationFunctions/validateOperatorType");
+const validateCompaniesHouseNumber = require("./validationFunctions/validateCompaniesHouseNumber");
 
 module.exports = {
   validateDeclaration,
@@ -23,5 +24,6 @@ module.exports = {
   validateOperatorType,
   validateStreet,
   validateTown,
-  validateCompanyName
+  validateCompanyName,
+  validateCompaniesHouseNumber
 };
