@@ -9,7 +9,7 @@ const validatePostCode = require("./validationFunctions/validatePostCode");
 const validateStreet = require("./validationFunctions/validateStreet");
 const validateTown = require("./validationFunctions/validateTown");
 const validateCompanyName = require("./validationFunctions/validateCompanyName");
-const validateOperatorType = require("./validationFunctions/validateOperatorType");
+const validateRadioButtons = require("./validationFunctions/validateRadioButtons");
 const validateCompaniesHouseNumber = require("./validationFunctions/validateCompaniesHouseNumber");
 
 module.exports = {
@@ -21,7 +21,7 @@ module.exports = {
   validatePhoneNumber,
   validatePhoneNumberOptional,
   validatePostCode,
-  validateOperatorType,
+  validateRadioButtons,
   validateStreet,
   validateTown,
   validateCompanyName,
