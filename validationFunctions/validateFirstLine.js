@@ -1,6 +1,6 @@
 const { isAscii, isEmpty, trim } = require("validator");
 
-const validateEstablishmentFirstLine = firstLine => {
+const validateFirstLine = firstLine => {
   if (typeof firstLine === "string") {
     if (isEmpty(trim(firstLine))) {
       return false;
@@ -10,4 +10,4 @@ const validateEstablishmentFirstLine = firstLine => {
   return false;
 };
 
-module.exports = validateEstablishmentFirstLine;
+module.exports = validateFirstLine;

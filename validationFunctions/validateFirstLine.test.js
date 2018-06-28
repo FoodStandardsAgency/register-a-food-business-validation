@@ -1,6 +1,6 @@
-const validateEstablishmentFirstLine = require("./validateEstablishmentFirstLine");
+const validateFirstLine = require("./validateFirstLine");
 
-describe("Function: validateEstablishmentFirstLine", () => {
+describe("Function: validateFirstLine", () => {
   it("Should return false if type is not string", () => {
     // Arrange
     const badFirstLines = [[], {}, undefined, null];
@@ -8,7 +8,7 @@ describe("Function: validateEstablishmentFirstLine", () => {
     // Act
     badFirstLines.forEach(firstLine => {
       // Assert
-      const valid = validateEstablishmentFirstLine(firstLine);
+      const valid = validateFirstLine(firstLine);
       expect(valid).toBe(false);
     });
   });
@@ -20,7 +20,7 @@ describe("Function: validateEstablishmentFirstLine", () => {
     // Act
     badFirstLines.forEach(firstLine => {
       // Assert
-      const valid = validateEstablishmentFirstLine(firstLine);
+      const valid = validateFirstLine(firstLine);
       expect(valid).toBe(false);
     });
   });
@@ -32,7 +32,7 @@ describe("Function: validateEstablishmentFirstLine", () => {
     // Act
     badFirstLines.forEach(firstLine => {
       // Assert
-      const valid = validateEstablishmentFirstLine(firstLine);
+      const valid = validateFirstLine(firstLine);
       expect(valid).toBe(false);
     });
   });
@@ -48,7 +48,7 @@ describe("Function: validateEstablishmentFirstLine", () => {
     // Act
     goodFirstLines.forEach(firstLine => {
       // Assert
-      const valid = validateEstablishmentFirstLine(firstLine);
+      const valid = validateFirstLine(firstLine);
       expect(valid).toBe(true);
     });
   });
