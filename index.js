@@ -12,6 +12,7 @@ const validateCompanyName = require("./validationFunctions/validateCompanyName")
 const validateRadioButtons = require("./validationFunctions/validateRadioButtons");
 const validateCompaniesHouseNumber = require("./validationFunctions/validateCompaniesHouseNumber");
 const validateCharityNumber = require("./validationFunctions/validateCharityNumber");
+const validateCharityName = require("./validationFunctions/validateCharityName");
 
 module.exports = {
   validateDeclaration,
@@ -27,5 +28,6 @@ module.exports = {
   validateTown,
   validateCompanyName,
   validateCompaniesHouseNumber,
-  validateCharityNumber
+  validateCharityNumber,
+  validateCharityName
 };
