@@ -1,6 +1,6 @@
 const validateDeclaration = require("./validationFunctions/validateDeclaration");
 const validateEmail = require("./validationFunctions/validateEmail");
-const validateFirstLine = require("./validationFunctions/validateEstablishmentFirstLine");
+const validateFirstLine = require("./validationFunctions/validateFirstLine");
 const validateEstablishmentTradingName = require("./validationFunctions/validateEstablishmentTradingName");
 const validateName = require("./validationFunctions/validateName");
 const validatePhoneNumber = require("./validationFunctions/validatePhoneNumber");
