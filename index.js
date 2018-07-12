@@ -25,7 +25,7 @@ module.exports = {
   validatePhoneNumberOptional,
   validatePostCode,
   validateRadioButtons,
-  validateOptionalString,
+  validateStreet,
   validateTown,
   validateCompanyName,
   validateCompaniesHouseNumber,
