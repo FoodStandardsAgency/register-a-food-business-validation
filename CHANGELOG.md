@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
+## v1.6.2 - 12th July 2018 (released)
+
+### Modified
+
+- Added missing export
+
 ## v1.6.1 - 12th July 2018 (released)
 
 ### Modified
