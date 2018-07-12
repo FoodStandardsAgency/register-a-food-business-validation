@@ -1,57 +1,57 @@
-const validateStreet = require("./validateStreet");
+const validateOptionalString = require("./validateOptionalString");
 
-describe("Function: validateStreet", () => {
+describe("Function: validateOptionalString", () => {
   it("Should return false when type is not string", () => {
     // Arrange
-    const badStreetName = [[], {}, null, undefined];
+    const badString = [[], {}, null, undefined];
     // Act
-    badStreetName.forEach(streetName => {
+    badString.forEach(string => {
       // Assert
-      const valid = validateStreet(streetName);
+      const valid = validateOptionalString(string);
       expect(valid).toBe(false);
     });
   });
 
   it("Should return true when input is empty", () => {
     // Arrange
-    const street = "";
+    const string = "";
 
     // Act
-    const valid = validateStreet(street);
+    const valid = validateOptionalString(string);
 
     expect(valid).toBe(true);
   });
 
   it("Should return false when input is blank string", () => {
     // Arrange
-    const street = "    ";
+    const string = "    ";
 
     // Act
-    const valid = validateStreet(street);
+    const valid = validateOptionalString(string);
 
     expect(valid).toBe(false);
   });
 
   it("Should return false if string contains non Ascii chars", () => {
     // Arrange
-    const badStreets = ["§", "¥", "«® ¢"];
+    const badStrings = ["§", "¥", "«® ¢"];
 
     // Act
-    badStreets.forEach(street => {
+    badStrings.forEach(string => {
       // Assert
-      const valid = validateStreet(street);
+      const valid = validateOptionalString(string);
       expect(valid).toBe(false);
     });
   });
 
   it("Should return true when input is Ascii string", () => {
     // Arrange
-    const goodStreets = ["Fake St", "The Mews"];
+    const goodStrings = ["I am a good string", "Best String"];
 
     // Act
-    goodStreets.forEach(street => {
+    goodStrings.forEach(string => {
       // Assert
-      const valid = validateStreet(street);
+      const valid = validateOptionalString(string);
       expect(valid).toBe(true);
     });
   });
