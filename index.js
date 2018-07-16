@@ -14,6 +14,7 @@ const validateCompaniesHouseNumber = require("./validationFunctions/validateComp
 const validateCharityNumber = require("./validationFunctions/validateCharityNumber");
 const validateCharityName = require("./validationFunctions/validateCharityName");
 const validateCustomerType = require("./validationFunctions/validateCustomerType");
+const validateDate = require("./validationFunctions/validateDate");
 
 module.exports = {
   validateDeclaration,
@@ -31,5 +32,6 @@ module.exports = {
   validateCompaniesHouseNumber,
   validateCharityNumber,
   validateCharityName,
-  validateCustomerType
+  validateCustomerType,
+  validateDate
 };
