@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/slice-and-dice/register-a-food-business-validation#readme",
   "dependencies": {
+    "moment": "^2.22.2",
     "validator": "^10.4.0"
   },
   "devDependencies": {
