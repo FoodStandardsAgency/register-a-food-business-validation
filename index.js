@@ -14,6 +14,7 @@ const validateCompaniesHouseNumber = require("./validationFunctions/validateComp
 const validateCharityNumber = require("./validationFunctions/validateCharityNumber");
 const validateCharityName = require("./validationFunctions/validateCharityName");
 const validateCustomerType = require("./validationFunctions/validateCustomerType");
+const validateDate = require("./validationFunctions/validateDate");
 
 module.exports = {
   validateDeclaration,
@@ -25,11 +26,12 @@ module.exports = {
   validatePhoneNumberOptional,
   validatePostCode,
   validateRadioButtons,
-  validateStreet,
+  validateOptionalString,
   validateTown,
   validateCompanyName,
   validateCompaniesHouseNumber,
   validateCharityNumber,
   validateCharityName,
-  validateCustomerType
+  validateCustomerType,
+  validateDate
 };
