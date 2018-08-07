@@ -55,19 +55,4 @@ describe("Function: validateBusinessType", () => {
       expect(valid).toBe(true);
     });
   });
-
-  it("should return true if business type is a match to the business type, plus one space, plus any text in brackets", () => {
-    // Arrange
-    const goodTypes = [
-      "Butcher (example)",
-      "Butcher (another & test!)",
-      "Fruit and vegetable farm (there is a space after this) "
-    ];
-
-    //Act
-    goodTypes.forEach(type => {
-      const valid = validateBusinessType(type);
-      expect(valid).toBe(true);
-    });
-  });
 });

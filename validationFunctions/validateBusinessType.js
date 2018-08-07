@@ -7,18 +7,11 @@ const validateBusinessType = type => {
       return false;
     }
 
-    const indexOfFirstBracket = type.indexOf("(");
-    const indexOfLastBracket = type.lastIndexOf(")");
-    const textInBrackets = type.slice(
-      indexOfFirstBracket,
-      indexOfLastBracket + 1
-    );
-    const textWithoutBrackets = type.replace(textInBrackets, "");
     const matchesValidBusinessTypesList = validBusinessTypes.includes(
-      trim(textWithoutBrackets)
+      trim(type)
     );
 
-    return matchesValidBusinessTypesList ? true : false;
+    return matchesValidBusinessTypesList;
   }
   return false;
 };
