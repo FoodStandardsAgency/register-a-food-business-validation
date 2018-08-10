@@ -18,6 +18,7 @@ const validateDate = require("./validationFunctions/validateDate");
 const validatePastDate = require("./validationFunctions/validatePastDate");
 const validateFutureDate = require("./validationFunctions/validateFutureDate");
 const validateBusinessType = require("./validationFunctions/validateBusinessType");
+const validateImportExportActivities = require("./validationFunctions/validateImportExportActivities");
 
 module.exports = {
   validateDeclaration,
