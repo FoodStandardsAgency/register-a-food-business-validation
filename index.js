@@ -39,5 +39,6 @@ module.exports = {
   validateDate,
   validatePastDate,
   validateFutureDate,
+  validateImportExportActivities,
   validateBusinessType
 };
