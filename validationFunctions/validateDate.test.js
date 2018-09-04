@@ -14,15 +14,17 @@ describe("Function: validateDate", () => {
     });
   });
 
-  it("should return true when input is ISO date", () => {
+  it("should return true when input is a valid date", () => {
     // Arrange
-    const input = "2018-06-17";
+    const dates = ["2018-06-17", "2018-1-1"];
 
     // Act
-    const result = validateDate(input);
+    dates.forEach(date => {
+      const result = validateDate(date);
 
-    // Assert
-    expect(result).toBe(true);
+      // Assert
+      expect(result).toBe(true);
+    });
   });
 
   it("should return false when input is non ISO date", () => {
