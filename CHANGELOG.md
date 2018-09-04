@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.10.3 - 4th September 2018 (released)
+
+### Modified
+
+- Date validation to allow single digits in month and date
+
+## v1.10.2 - 4th September 2018 (released)
+
+### Modified
+
+- Added trim function to email and postcode to allow whitespaces in input
+
 ## v1.10.1 - 10th August 2018 (released)
 
 ### Modified

@@ -50,4 +50,19 @@ describe("Function: validateEmail", () => {
       expect(valid).toBe(true);
     });
   });
+
+  it("Should return true if there is an empty space before or after the e-mail", () => {
+    // Arrange
+    const goodEmails = [
+      "anishasawesome@avacado.com ",
+      " joejolly1@gmail.co.uk",
+      "django123@hotmail.com  "
+    ];
+    // Act
+    goodEmails.forEach(email => {
+      // Assert
+      const valid = validateEmail(email);
+      expect(valid).toBe(true);
+    });
+  });
 });
