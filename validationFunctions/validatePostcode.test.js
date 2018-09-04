@@ -36,4 +36,16 @@ describe("Function: validatePostCode", () => {
       expect(valid).toBe(true);
     });
   });
+
+  it("should return true if string has space before or after postcode", () => {
+    // Arrange
+    const goodPostCodes = ["SW12 ", " SE1 9PZ", "TW1   "];
+
+    // Act
+    goodPostCodes.forEach(postcode => {
+      // Assert
+      const valid = validatePostCode(postcode);
+      expect(valid).toBe(true);
+    });
+  });
 });

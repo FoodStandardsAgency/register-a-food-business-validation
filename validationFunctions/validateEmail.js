@@ -1,8 +1,9 @@
-const { isEmail } = require("validator");
+const { isEmail, trim } = require("validator");
 
 const validateEmail = email => {
   if (typeof email === "string") {
-    return isEmail(email);
+    const noWhiteSpaceEmail = trim(email);
+    return isEmail(noWhiteSpaceEmail);
   }
   return false;
 };

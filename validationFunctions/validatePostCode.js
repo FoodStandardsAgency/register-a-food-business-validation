@@ -1,8 +1,9 @@
-const { isPostalCode } = require("validator");
+const { isPostalCode, trim } = require("validator");
 
 const validatePostCode = postcode => {
   if (typeof postcode === "string") {
-    return isPostalCode(postcode, "GB") ? true : false;
+    const noWhiteSpacePostcode = trim(postcode);
+    return isPostalCode(noWhiteSpacePostcode, "GB") ? true : false;
   }
   return false;
 };
