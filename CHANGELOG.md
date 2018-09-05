@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.10.4 - 5th September 2018 (released)
+
+### Modified
+
+- Date validation to allow present date
+
 ## v1.10.3 - 4th September 2018 (released)
 
 ### Modified
