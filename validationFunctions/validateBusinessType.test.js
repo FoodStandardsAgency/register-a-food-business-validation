@@ -44,7 +44,6 @@ describe("Function: validateBusinessType", () => {
     const goodTypes = [
       "Butcher",
       "Butcher ",
-      "Fruit and vegetable farm",
       "Livestock farm",
       "Livestock farm   "
     ];

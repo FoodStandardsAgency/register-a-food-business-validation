@@ -21,7 +21,7 @@ const validBusinessTypes = [
   "Ice cream manufacturer",
   "Commercial bakery",
   "Ready to eat meals or food manufacturer",
-  "TBC - Nathan will decide",
+  "Dietic or baby food manufacturer",
   "Manufacturer of other food products",
   "Alcoholic drinks manufacturer",
   "Non alcoholic drinks manufacturer",
