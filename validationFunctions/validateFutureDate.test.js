@@ -49,4 +49,15 @@ describe("Function: validateFutureDate", () => {
     // Assert
     expect(result).toBe(true);
   });
+
+  it("should return true when input is current date", () => {
+    // Arrange
+    const currentDate = moment().format("YYYY-MM-DD");
+
+    // Act
+    const result = validateFutureDate(currentDate);
+
+    // Assert
+    expect(result).toBe(true);
+  });
 });
