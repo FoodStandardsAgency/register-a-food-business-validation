@@ -42,6 +42,16 @@ describe("Function: validate primary contact", () => {
     });
   });
 
+  it("Should return false if phone number isnt between 5-20", () => {
+    //Arrange
+    const badNumbers = ["123", "1234567891012345678901"];
+    badNumbers.forEach(number => {
+      //Assert
+      const valid = validatePhoneNumber(number);
+      expect(valid).toBe(false);
+    });
+  });
+
   it("Should return false if string contains non numeric characters", () => {
     //Arrange
     const badNumbers = ["djdheiu7373", "wuyewixx@$", ".+()-9w"];
