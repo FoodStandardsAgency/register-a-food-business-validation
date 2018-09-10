@@ -6,7 +6,9 @@ const validatePhoneNumber = phoneNumber => {
     if (phoneNumber.startsWith("+")) {
       phoneNumber = phoneNumber.substring(1);
     }
-    return isNumeric(phoneNumber) ? true : false;
+    if (phoneNumber.length > 5 && phoneNumber.length < 20) {
+      return isNumeric(phoneNumber) ? true : false;
+    }
   }
   return false;
 };
