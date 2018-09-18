@@ -39,4 +39,14 @@ describe("Function: validateBusinessOtherDetails", () => {
     const valid = validateBusinessOtherDetails(text);
     expect(valid).toBe(false);
   });
+
+  it("Should return true if string is less than 1500 characters", () => {
+    // Arrange
+    const text = [
+      "This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters."
+    ];
+    // Act
+    const valid = validateBusinessOtherDetails(text);
+    expect(valid).toBe(false);
+  });
 });
