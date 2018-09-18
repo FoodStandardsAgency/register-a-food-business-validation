@@ -32,9 +32,9 @@ describe("Function: validateBusinessOtherDetails", () => {
 
   it("Should return false if string is longer that 1500 characters", () => {
     // Arrange
-    const text = [
-      "This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters.  This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters."
-    ];
+    const text =
+      "This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters.  This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters. This is a paragraph containing more than 1500 characters.";
+
     // Act
     const valid = validateBusinessOtherDetails(text);
     expect(valid).toBe(false);
@@ -42,11 +42,10 @@ describe("Function: validateBusinessOtherDetails", () => {
 
   it("Should return true if string is less than 1500 characters", () => {
     // Arrange
-    const text = [
-      "This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters."
-    ];
+    const text =
+      "This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters. This is a paragraph containing less than 1500 characters.";
     // Act
     const valid = validateBusinessOtherDetails(text);
-    expect(valid).toBe(false);
+    expect(valid).toBe(true);
   });
 });
