@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.10.7 - 18th September 2018 (released)
+
+### Added
+
+- Added validateBusinessOtherDetails
+
 ## v1.10.6 - 10th September 2018 (released)
 
 ### Modified
