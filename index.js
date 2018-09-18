@@ -19,6 +19,7 @@ const validatePastDate = require("./validationFunctions/validatePastDate");
 const validateFutureDate = require("./validationFunctions/validateFutureDate");
 const validateBusinessType = require("./validationFunctions/validateBusinessType");
 const validateImportExportActivities = require("./validationFunctions/validateImportExportActivities");
+const validateBusinessOtherDetails = require("./validationFunctions/validateBusinessOtherDetails");
 
 module.exports = {
   validateDeclaration,
@@ -41,5 +42,6 @@ module.exports = {
   validatePastDate,
   validateFutureDate,
   validateImportExportActivities,
-  validateBusinessType
+  validateBusinessType,
+  validateBusinessOtherDetails
 };
