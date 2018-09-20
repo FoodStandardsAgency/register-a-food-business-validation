@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.11.1 - 20th September 2018 (released)
+
+### Modified
+
+- Removed blank string test from validateBusinessOtherDetails
+
 ## v1.11.0 - 18th September 2018 (released)
 
 ### Added
