@@ -20,16 +20,6 @@ describe("Function: validateBusinessOtherDetails", () => {
     //Assert
     expect(valid).toBe(true);
   });
-
-  it("Should return false when input is blank string", () => {
-    // Arrange
-    const text = "    ";
-    // Act
-    const valid = validateBusinessOtherDetails(text);
-    // Assert
-    expect(valid).toBe(false);
-  });
-
   it("Should return false if string is longer that 1500 characters", () => {
     // Arrange
     const text =
