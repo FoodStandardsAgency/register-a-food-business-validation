@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.12.0 - 1st October 2018 (released)
+
+### Added
+
+- Added validateOpeningDaysIrregular
+
 ## v1.11.1 - 20th September 2018 (released)
 
 ### Modified
@@ -14,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Added validateBusinessOtherDetails
+  validateOpeningDaysIrregular
 
 ## v1.10.6 - 10th September 2018 (released)
 
