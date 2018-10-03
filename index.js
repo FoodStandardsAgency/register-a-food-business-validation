@@ -20,8 +20,8 @@ const validateFutureDate = require("./validationFunctions/validateFutureDate");
 const validateBusinessType = require("./validationFunctions/validateBusinessType");
 const validateImportExportActivities = require("./validationFunctions/validateImportExportActivities");
 const validateBusinessOtherDetails = require("./validationFunctions/validateBusinessOtherDetails");
-const validateOpeningDaysIrregular = require("./validationFunctions//validateOpeningDaysIrregular");
-const validateOpeningDay = require("./validationFunctions//validateOpeningDay");
+const validateOpeningDaysIrregular = require("./validationFunctions/validateOpeningDaysIrregular");
+const validateOpeningDay = require("./validationFunctions/validateOpeningDay");
 
 module.exports = {
   validateDeclaration,
