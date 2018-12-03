@@ -1,3 +1,8 @@
+/**
+ * Function for validating the phone number mandatory field
+ * @module functions/validatePhoneNumber
+ */
+
 const { isNumeric } = require("validator");
 
 const validatePhoneNumber = phoneNumber => {

@@ -1,3 +1,7 @@
+/**
+ * Function for validating the email mandatory field
+ * @module functions/validateEmail
+ */
 const { isEmail, trim } = require("validator");
 
 const validateEmail = email => {

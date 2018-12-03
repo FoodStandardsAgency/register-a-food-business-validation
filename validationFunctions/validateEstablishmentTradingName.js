@@ -1,3 +1,8 @@
+/**
+ * Function for validating the establishment trading name mandatory field
+ * @module functions/validateEstablishmentTradingName
+ */
+
 const { isAscii, isEmpty, trim } = require("validator");
 
 const validateEstablishmentTradingName = tradingName => {

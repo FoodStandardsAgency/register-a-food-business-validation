@@ -1,3 +1,8 @@
+/**
+ * Function for validating the first line of address mandatory field
+ * @module functions/validateFirstLine
+ */
+
 const { isAscii, isEmpty, trim } = require("validator");
 
 const validateFirstLine = firstLine => {

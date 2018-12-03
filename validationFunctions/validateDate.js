@@ -1,3 +1,8 @@
+/**
+ * Function for validating the date mandatory field
+ * @module functions/validateDate
+ */
+
 const { isISO8601 } = require("validator");
 
 const validateDate = date => {

@@ -1,3 +1,8 @@
+/**
+ * Function for validating the import export activities mandatory field
+ * @module functions/validateImportExportActivities
+ */
+
 const validateImportExportActivities = importExportActivities => {
   const allowedValues = [
     "Directly import",

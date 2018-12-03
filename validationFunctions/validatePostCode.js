@@ -1,3 +1,8 @@
+/**
+ * Function for validating the post code mandatory field
+ * @module functions/validatePostCode
+ */
+
 const { isPostalCode, trim } = require("validator");
 
 const validatePostCode = postcode => {

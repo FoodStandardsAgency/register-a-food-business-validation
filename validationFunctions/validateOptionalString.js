@@ -1,3 +1,8 @@
+/**
+ * Function for validating any optional string
+ * @module functions/validateOptionalString
+ */
+
 const { isAscii, isEmpty, trim } = require("validator");
 
 const validateOptionalString = optionalString => {

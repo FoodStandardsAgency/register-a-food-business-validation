@@ -1,3 +1,8 @@
+/**
+ * Function for validating the business type mandatory field
+ * @module functions/validateBusinessType
+ */
+
 const { isEmpty, trim } = require("validator");
 const validBusinessTypes = require("../valid-business-types");
 

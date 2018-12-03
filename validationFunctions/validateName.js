@@ -1,3 +1,8 @@
+/**
+ * Function for validating the name mandatory field
+ * @module functions/validateName
+ */
+
 const { isAscii, isEmpty, trim } = require("validator");
 
 const validateName = name => {

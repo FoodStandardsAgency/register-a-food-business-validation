@@ -1,3 +1,8 @@
+/**
+ * Function for validating the opening days irregular mandatory field
+ * @module functions/validateOpeningDaysIrregular
+ */
+
 const { isEmpty, trim } = require("validator");
 
 const validateOpeningDaysIrregular = text => {

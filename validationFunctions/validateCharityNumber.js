@@ -1,3 +1,8 @@
+/**
+ * Function for validating the charity number mandatory field
+ * @module functions/validateCharityNumber
+ */
+
 const { isEmpty, trim, isAlphanumeric, blacklist } = require("validator");
 
 const validateCharityNumber = charityNumber => {

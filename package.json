@@ -9,7 +9,8 @@
     "lint": "eslint ./validationFunctions",
     "lint:fix": "eslint ./validationFunctions --fix",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "jsdoc": "rm -rf ./docs/jsdoc && jsdoc -r ./validationFunctions -d ./docs/jsdoc"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "jest": "^23.1.0",
+    "jsdoc": "3.5.5",
     "prettier": "^1.13.5"
   }
 }

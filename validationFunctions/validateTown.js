@@ -1,3 +1,8 @@
+/**
+ * Function for validating the town optional field
+ * @module functions/validateTown
+ */
+
 const { isAscii, isEmpty, trim } = require("validator");
 
 const validateTown = town => {

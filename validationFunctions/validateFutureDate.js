@@ -1,3 +1,8 @@
+/**
+ * Function for validating the validated date input is in the future
+ * @module functions/validateFutureDate
+ */
+
 const moment = require("moment");
 const validateDate = require("./validateDate");
 

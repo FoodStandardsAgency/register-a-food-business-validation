@@ -1,3 +1,8 @@
+/**
+ * Function for validating a validated date to check if its in the past
+ * @module functions/validatePastDate
+ */
+
 const moment = require("moment");
 const validateDate = require("./validateDate");
 

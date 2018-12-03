@@ -1,3 +1,8 @@
+/**
+ * Function for validating the phone number optional field
+ * @module functions/validatePhoneNumberOptional
+ */
+
 const { isEmpty } = require("validator");
 const validatePhoneNumber = require("./validatePhoneNumber");
 

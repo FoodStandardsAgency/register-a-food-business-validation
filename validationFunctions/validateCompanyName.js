@@ -1,3 +1,8 @@
+/**
+ * Function for validating the company name mandatory field
+ * @module functions/validateCompanyName
+ */
+
 const { isEmpty, trim } = require("validator");
 
 const validateCompanyName = name => {
