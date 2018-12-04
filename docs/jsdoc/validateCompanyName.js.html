@@ -33,6 +33,14 @@
 
 const { isEmpty, trim } = require("validator");
 
+/**
+ * Runs custom validation on the companies name. It will be true if the input is string of length less than 50 characters. Empty string will return false as the field is mandatory.
+ *
+ * @param {string} name The text string of the companies name the user supplies
+ *
+ * @returns {boolean} It will return true if the string is valid and false if it is not valid
+ */
+
 const validateCompanyName = name => {
   if (typeof name === "string") {
     if (isEmpty(trim(name))) {
@@ -54,13 +62,13 @@ module.exports = validateCompanyName;
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-functions_validateBusinessOtherDetails.html">functions/validateBusinessOtherDetails</a></li><li><a href="module-functions_validateBusinessType.html">functions/validateBusinessType</a></li><li><a href="module-functions_validateCharityName.html">functions/validateCharityName</a></li><li><a href="module-functions_validateCharityNumber.html">functions/validateCharityNumber</a></li><li><a href="module-functions_validateCompanyName.html">functions/validateCompanyName</a></li><li><a href="module-functions_validateCustomerType.html">functions/validateCustomerType</a></li><li><a href="module-functions_validateDate.html">functions/validateDate</a></li><li><a href="module-functions_validateDeclaration.html">functions/validateDeclaration</a></li><li><a href="module-functions_validateEmail.html">functions/validateEmail</a></li><li><a href="module-functions_validateEstablishmentTradingName.html">functions/validateEstablishmentTradingName</a></li><li><a href="module-functions_validateFirstLine.html">functions/validateFirstLine</a></li><li><a href="module-functions_validateFutureDate.html">functions/validateFutureDate</a></li><li><a href="module-functions_validateImportExportActivities.html">functions/validateImportExportActivities</a></li><li><a href="module-functions_validateName.html">functions/validateName</a></li><li><a href="module-functions_validateOpeningDay.html">functions/validateOpeningDay</a></li><li><a href="module-functions_validateOpeningDaysIrregular.html">functions/validateOpeningDaysIrregular</a></li><li><a href="module-functions_validateOptionalString.html">functions/validateOptionalString</a></li><li><a href="module-functions_validatePastDate.html">functions/validatePastDate</a></li><li><a href="module-functions_validatePhoneNumber.html">functions/validatePhoneNumber</a></li><li><a href="module-functions_validatePhoneNumberOptional.html">functions/validatePhoneNumberOptional</a></li><li><a href="module-functions_validatePostCode.html">functions/validatePostCode</a></li><li><a href="module-functions_validateRadioButtons.html">functions/validateRadioButtons</a></li><li><a href="module-functions_validateTown.html">functions/validateTown</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-functions_validateBusinessOtherDetails.html">functions/validateBusinessOtherDetails</a></li><li><a href="module-functions_validateBusinessType.html">functions/validateBusinessType</a></li><li><a href="module-functions_validateCharityName.html">functions/validateCharityName</a></li><li><a href="module-functions_validateCharityNumber.html">functions/validateCharityNumber</a></li><li><a href="module-functions_validateCompaniesHouseNumber.html">functions/validateCompaniesHouseNumber</a></li><li><a href="module-functions_validateCompanyName.html">functions/validateCompanyName</a></li><li><a href="module-functions_validateCustomerType.html">functions/validateCustomerType</a></li><li><a href="module-functions_validateDate.html">functions/validateDate</a></li><li><a href="module-functions_validateDeclaration.html">functions/validateDeclaration</a></li><li><a href="module-functions_validateEmail.html">functions/validateEmail</a></li><li><a href="module-functions_validateEstablishmentTradingName.html">functions/validateEstablishmentTradingName</a></li><li><a href="module-functions_validateFirstLine.html">functions/validateFirstLine</a></li><li><a href="module-functions_validateFutureDate.html">functions/validateFutureDate</a></li><li><a href="module-functions_validateImportExportActivities.html">functions/validateImportExportActivities</a></li><li><a href="module-functions_validateName.html">functions/validateName</a></li><li><a href="module-functions_validateOpeningDay.html">functions/validateOpeningDay</a></li><li><a href="module-functions_validateOpeningDaysIrregular.html">functions/validateOpeningDaysIrregular</a></li><li><a href="module-functions_validateOptionalString.html">functions/validateOptionalString</a></li><li><a href="module-functions_validatePastDate.html">functions/validatePastDate</a></li><li><a href="module-functions_validatePhoneNumber.html">functions/validatePhoneNumber</a></li><li><a href="module-functions_validatePhoneNumberOptional.html">functions/validatePhoneNumberOptional</a></li><li><a href="module-functions_validatePostCode.html">functions/validatePostCode</a></li><li><a href="module-functions_validateRadioButtons.html">functions/validateRadioButtons</a></li><li><a href="module-functions_validateTown.html">functions/validateTown</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 03 2018 17:34:12 GMT+0000 (GMT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Dec 04 2018 15:33:40 GMT+0000 (GMT)
 </footer>
 
 <script> prettyPrint(); </script>

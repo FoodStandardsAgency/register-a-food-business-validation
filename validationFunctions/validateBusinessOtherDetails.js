@@ -6,11 +6,11 @@
 const { isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on the string business other details and will be true if the input is a string that is less than 1500 characters. Empty string will also return true as the field is optional.
+ * Runs custom validation on the string business other details. It will be true if the input is a string that is less than 1500 characters. Empty string will also return true as the field is optional.
  *
  * @param {string} text The text string of the business other details the user supplies
  *
- * @returns {boolean} true if the string is valid and false if it is not valid
+ * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
 const validateBusinessOtherDetails = text => {

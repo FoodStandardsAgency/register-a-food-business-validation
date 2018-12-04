@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: validateFirstLine.js</title>
+    <title>JSDoc: Module: functions/validateCompaniesHouseNumber</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,44 +17,291 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: validateFirstLine.js</h1>
+    <h1 class="page-title">Module: functions/validateCompaniesHouseNumber</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Function for validating the first line of address mandatory field
- * @module functions/validateFirstLine
- */
+        
+            
+        
+    
+</header>
 
-const { isAscii, isEmpty, trim } = require("validator");
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Function for validating the companies house number mandatory field</div>
+        
 
-/**
- * Runs custom validation on the first line of the address. It will be true if the input is an ASCII string. Empty string will return false as the field is mandatory.
- *
- * @param {string} firstLine The text string of the first line of the address the user supplies
- *
- * @returns {boolean} It will return true if the string is valid and false if it is not valid
- */
+        
+            
 
-const validateFirstLine = firstLine => {
-  if (typeof firstLine === "string") {
-    if (isEmpty(trim(firstLine))) {
-      return false;
-    }
-    return isAscii(firstLine) ? true : false;
-  }
-  return false;
-};
 
-module.exports = validateFirstLine;
-</code></pre>
-        </article>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="validateCompaniesHouseNumber.js.html">validateCompaniesHouseNumber.js</a>, <a href="validateCompaniesHouseNumber.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~validateCompaniesHouseNumber"><span class="type-signature">(inner) </span>validateCompaniesHouseNumber<span class="signature">(chNumber)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Runs custom validation on the string companies house number. It will be true if the input is an alphanumeric string of length 8 characters, with the first two characters beig alphabetic and the last 6 being numeric. Empty string will return false as the field is mandatory.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>chNumber</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string of the companies house number the user supplies</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="validateCompaniesHouseNumber.js.html">validateCompaniesHouseNumber.js</a>, <a href="validateCompaniesHouseNumber.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    It will return true if the string is valid and false if it is not valid
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
