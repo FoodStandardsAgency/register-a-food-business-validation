@@ -4,7 +4,7 @@
  */
 
 /**
- * Runs custom validation on radio buttons. The function returns true if a radio button has been selected (data field has a value) and false if it doesnt as it is a mandatory field.
+ * Runs custom validation on radio buttons. The function returns true if a radio button has been selected (has a value) and false if it doesnt as it is a mandatory field.
  *
  * @param {string} radioSelected The text string of the declaration statement the user supplies
  *
