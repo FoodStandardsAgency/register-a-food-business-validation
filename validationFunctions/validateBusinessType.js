@@ -1,5 +1,5 @@
 const { isEmpty, trim } = require("validator");
-const validBusinessTypes = require("../valid-business-types");
+const validBusinessTypes = require("../valid-business-types.json");
 
 const validateBusinessType = type => {
   if (typeof type === "string") {

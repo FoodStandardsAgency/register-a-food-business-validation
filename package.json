@@ -4,12 +4,13 @@
   "description": "Validation functions for the register a food business service",
   "main": "index.js",
   "scripts": {
-    "format:verify": "prettier --list-different 'validationFunctions/**/*.js'",
-    "format": "prettier --write 'validationFunctions/**/*.js'",
+    "format:verify": "prettier --list-different validationFunctions/**/*.js ./valid-business-types.json",
+    "format": "prettier --write validationFunctions/**/*.js ./valid-business-types.json",
     "lint": "eslint ./validationFunctions",
     "lint:fix": "eslint ./validationFunctions --fix",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "updateBusinessTypes": "node ./update-business-types.js && npm run format"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "jest": "^23.1.0",
+    "node-fetch": "^2.3.0",
     "prettier": "^1.13.5"
   }
 }
