@@ -4,6 +4,7 @@ module.exports = {
     "**/*.{js}",
     "!**/jest.config.js",
     "!**/coverage/**/*.{js}",
+    "!update-business-types.js",
     "!index.js"
   ],
   coverageThreshold: {

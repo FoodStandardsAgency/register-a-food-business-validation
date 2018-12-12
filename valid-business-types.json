@@ -1,4 +1,4 @@
-const validBusinessTypes = [
+[
   "Fruit and vegetable farm",
   "Livestock farm",
   "Arable farm",
@@ -71,6 +71,4 @@ const validBusinessTypes = [
   "Home caterer",
   "Meat cutting plant or commercial butcher",
   "Food auction hall"
-];
-
-module.exports = validBusinessTypes;
+]
