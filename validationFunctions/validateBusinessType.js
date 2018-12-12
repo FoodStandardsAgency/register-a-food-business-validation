@@ -20,7 +20,11 @@ const validateBusinessType = type => {
       return false;
     }
 
-    const matchesValidBusinessTypesList = validBusinessTypes.includes(
+    const trimmedValidBusinessTypes = validBusinessTypes.map(validType =>
+      trim(validType)
+    );
+
+    const matchesValidBusinessTypesList = trimmedValidBusinessTypes.includes(
       trim(type)
     );
 

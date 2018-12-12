@@ -1,4 +1,5 @@
 const validateBusinessType = require("./validateBusinessType");
+const validBusinessTypes = require("../valid-business-types.json");
 
 describe("Function: validateBusinessType", () => {
   it("should return false when type is not string", () => {
@@ -47,6 +48,19 @@ describe("Function: validateBusinessType", () => {
       "Livestock farm",
       "Livestock farm   "
     ];
+
+    //Act
+    goodTypes.forEach(type => {
+      const valid = validateBusinessType(type);
+      expect(valid).toBe(true);
+    });
+  });
+
+  it("should return true if business type in valid list has excess whitespace in it but is still a match", () => {
+    // Arrange
+    const goodTypes = ["Test type", "Test type ", "Another", "Another   "];
+
+    validBusinessTypes.unshift("Test type ", " Another   ");
 
     //Act
     goodTypes.forEach(type => {
