@@ -1,6 +1,6 @@
 {
   "name": "@slice-and-dice/register-a-food-business-validation",
-  "version": "1.13.1",
+  "version": "1.13.2",
   "description": "Validation functions for the register a food business service",
   "main": "index.js",
   "scripts": {
