@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.14.0 - 29th March 2019 (released)
+
+### Added
+
+- Added validatePartners and validatePartnerPrimaryContact
+
 ## v1.13.2 - 12th December 2018 (released)
 
 ### Modified
