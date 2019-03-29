@@ -22,6 +22,8 @@ const validateImportExportActivities = require("./validationFunctions/validateIm
 const validateBusinessOtherDetails = require("./validationFunctions/validateBusinessOtherDetails");
 const validateOpeningDaysIrregular = require("./validationFunctions/validateOpeningDaysIrregular");
 const validateOpeningDay = require("./validationFunctions/validateOpeningDay");
+const validatePartners = require("./validationFunctions/validatePartners");
+const validatePartnerPrimaryContact = require("./validationFunctions/validatePartnerPrimaryContact");
 
 module.exports = {
   validateDeclaration,
@@ -47,5 +49,7 @@ module.exports = {
   validateBusinessType,
   validateBusinessOtherDetails,
   validateOpeningDaysIrregular,
-  validateOpeningDay
+  validateOpeningDay,
+  validatePartners,
+  validatePartnerPrimaryContact
 };
