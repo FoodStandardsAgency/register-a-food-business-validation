@@ -50,4 +50,31 @@ describe("Function: validatePartners", () => {
     //Assert
     expect(valid).toBe(true);
   });
+
+  it("Should return true when the array length is exactly 2", () => {
+    //Arrange
+    const goodPartnersLength = [
+      { name: "", is_primary_contact: true },
+      { name: "", is_primary_contact: false }
+    ];
+    //Act
+    const valid = validatePartners(goodPartnersLength);
+    //Assert
+    expect(valid).toBe(true);
+  });
+
+  it("Should return true when the array length is exactly 5", () => {
+    //Arrange
+    const goodPartnersLength = [
+      { name: "", is_primary_contact: true },
+      { name: "", is_primary_contact: false },
+      { name: "", is_primary_contact: false },
+      { name: "", is_primary_contact: false },
+      { name: "", is_primary_contact: false }
+    ];
+    //Act
+    const valid = validatePartners(goodPartnersLength);
+    //Assert
+    expect(valid).toBe(true);
+  });
 });
