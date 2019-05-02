@@ -25,6 +25,7 @@ const validateOpeningDay = require("./validationFunctions/validateOpeningDay");
 const validatePartners = require("./validationFunctions/validatePartners");
 const validatePartnersHasPrimaryContact = require("./validationFunctions/validatePartnersHasPrimaryContact");
 const validatePartnerIsPrimaryContact = require("./validationFunctions/validatePartnerIsPrimaryContact");
+const validatePartnerName = require("./validationFunctions/validatePartnerName");
 
 module.exports = {
   validateDeclaration,
@@ -53,5 +54,6 @@ module.exports = {
   validateOpeningDay,
   validatePartners,
   validatePartnersHasPrimaryContact,
-  validatePartnerIsPrimaryContact
+  validatePartnerIsPrimaryContact,
+  validatePartnerName
 };
