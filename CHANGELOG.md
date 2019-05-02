@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.14.3 - 2nd May 2019 (released)
+
+### Added
+
+- Added validatePartnerName function
+
 ## v1.14.2 - 2nd May 2019 (released)
 
 ### Added
@@ -11,6 +17,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added JsDoc for the functions added in 1.14.0
 
 ### Modified
+
 - Renamed validatePartnerPrimaryContact to validatePartnersHasPrimaryContact
 - Modified validatePartnersHasPrimaryContact to include a check for array items length
 
