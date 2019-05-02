@@ -1,4 +1,4 @@
-const validatePartnerPrimaryContact = partners => {
+const validatePartnersHasPrimaryContact = partners => {
   if (Array.isArray(partners)) {
     if (partners.length >= 2 && partners.length <= 5) {
       const mainPartnershipContacts = partners.filter(
@@ -12,4 +12,4 @@ const validatePartnerPrimaryContact = partners => {
   return false;
 };
 
-module.exports = validatePartnerPrimaryContact;
+module.exports = validatePartnersHasPrimaryContact;

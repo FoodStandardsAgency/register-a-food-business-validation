@@ -1,13 +1,13 @@
-const validatePartnerPrimaryContact = require("./validatePartnerPrimaryContact");
+const validatePartnersHasPrimaryContact = require("./validatePartnersHasPrimaryContact");
 
-describe("Function: validatePartnerPrimaryContact", () => {
+describe("Function: validatePartnersHasPrimaryContact", () => {
   it("Should return false when type is not array", () => {
     // Arrange
     const badPartners = ["", {}, null, undefined];
     // Act
     badPartners.forEach(partner => {
       // Assert
-      const valid = validatePartnerPrimaryContact(partner);
+      const valid = validatePartnersHasPrimaryContact(partner);
       expect(valid).toBe(false);
     });
   });
@@ -22,7 +22,7 @@ describe("Function: validatePartnerPrimaryContact", () => {
       { name: "", partner_is_primary_contact: false }
     ];
     //Act
-    const valid = validatePartnerPrimaryContact(twoPrimaryContacts);
+    const valid = validatePartnersHasPrimaryContact(twoPrimaryContacts);
     //Assert
     expect(valid).toBe(false);
   });
@@ -36,7 +36,7 @@ describe("Function: validatePartnerPrimaryContact", () => {
       { name: "", partner_is_primary_contact: false }
     ];
     //Act
-    const valid = validatePartnerPrimaryContact(noPrimaryContact);
+    const valid = validatePartnersHasPrimaryContact(noPrimaryContact);
     //Assert
     expect(valid).toBe(false);
   });
@@ -51,7 +51,7 @@ describe("Function: validatePartnerPrimaryContact", () => {
       { name: "", partner_is_primary_contact: false }
     ];
     //Act
-    const valid = validatePartnerPrimaryContact(onePrimaryContact);
+    const valid = validatePartnersHasPrimaryContact(onePrimaryContact);
     //Assert
     expect(valid).toBe(true);
   });
@@ -60,7 +60,7 @@ describe("Function: validatePartnerPrimaryContact", () => {
     //Arrange
     const badPartnersLength = [{ name: "", partner_is_primary_contact: true }];
     //Act
-    const valid = validatePartnerPrimaryContact(badPartnersLength);
+    const valid = validatePartnersHasPrimaryContact(badPartnersLength);
     //Assert
     expect(valid).toBe(false);
   });
@@ -77,7 +77,7 @@ describe("Function: validatePartnerPrimaryContact", () => {
       { name: "", partner_is_primary_contact: false }
     ];
     //Act
-    const valid = validatePartnerPrimaryContact(badPartnersLength);
+    const valid = validatePartnersHasPrimaryContact(badPartnersLength);
     //Assert
     expect(valid).toBe(false);
   });
@@ -89,7 +89,7 @@ describe("Function: validatePartnerPrimaryContact", () => {
       { name: "", partner_is_primary_contact: false }
     ];
     //Act
-    const valid = validatePartnerPrimaryContact(goodPartnersLength);
+    const valid = validatePartnersHasPrimaryContact(goodPartnersLength);
     //Assert
     expect(valid).toBe(true);
   });
