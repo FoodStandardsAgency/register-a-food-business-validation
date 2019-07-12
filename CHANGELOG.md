@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.15.0 - 12 July 2019 (released)
+
+- Added validateWaterSupply function
+
+### Added
+
+- Added validatePartnerName function
+
 ## v1.14.3 - 2nd May 2019 (released)
 
 ### Added
