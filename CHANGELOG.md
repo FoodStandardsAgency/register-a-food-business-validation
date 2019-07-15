@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.16.0 - 15 July 2019 (released)
+
+- Added validateOpeningHours function
+
+### Added
+
 ## v1.15.0 - 12 July 2019 (released)
 
 - Added validateWaterSupply function
