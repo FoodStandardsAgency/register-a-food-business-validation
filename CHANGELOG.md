@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## v1.15.1 - 15 July 2019 (released)
+## v1.16.0 - 15 July 2019 (released)
 
 - Added validateOpeningHours function
 
