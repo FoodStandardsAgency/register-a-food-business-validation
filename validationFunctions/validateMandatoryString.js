@@ -21,7 +21,9 @@ const validateMandatoryString = mandatoryString => {
     if (isEmpty(trim(mandatoryString))) {
       return false;
     }
-    return isAscii(mandatoryString) ? true : false;
+    return isAscii(mandatoryString) && mandatoryString.length <= 255
+      ? true
+      : false;
   }
   return false;
 };

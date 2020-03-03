@@ -18,7 +18,7 @@ const validateName = name => {
     if (isEmpty(trim(name))) {
       return false;
     }
-    return isAscii(name) ? true : false;
+    return isAscii(name) && name.length <= 70 ? true : false;
   }
   return false;
 };

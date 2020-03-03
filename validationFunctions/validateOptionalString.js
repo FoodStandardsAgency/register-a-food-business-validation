@@ -21,7 +21,9 @@ const validateOptionalString = optionalString => {
     if (isEmpty(trim(optionalString))) {
       return false;
     }
-    return isAscii(optionalString) ? true : false;
+    return isAscii(optionalString) && optionalString.length <= 255
+      ? true
+      : false;
   }
   return false;
 };
