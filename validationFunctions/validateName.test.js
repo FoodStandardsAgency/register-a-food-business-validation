@@ -12,9 +12,9 @@ describe("Function: validateName", () => {
     });
   });
 
-  it("Should return true when the input is non-empty and ASCII", () => {
+  it("Should return true when the input is non-empty, ASCII and 70 characters or less", () => {
     //Arrange
-    const goodName = ["Joe", "Anisha", "Django!"];
+    const goodName = ["Joe", "Django!", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo"];
     //Act
     goodName.forEach(name => {
       //Assert
@@ -42,20 +42,6 @@ describe("Function: validateName", () => {
       //Assert
       const valid = validateName(name);
       expect(valid).toBe(false);
-    });
-  });
-
-  it("Should return true when input is 70 characters", () => {
-    // Arrange
-    const goodStrings = [
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo"
-    ];
-
-    // Act
-    goodStrings.forEach(string => {
-      // Assert
-      const valid = validateName(string);
-      expect(valid).toBe(true);
     });
   });
 

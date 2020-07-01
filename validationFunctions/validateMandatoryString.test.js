@@ -44,23 +44,9 @@ describe("Function: validateMandatoryString", () => {
     });
   });
 
-  it("Should return true when input is Ascii string", () => {
+  it("Should return true when input is Ascii string and 255 characters or less", () => {
     // Arrange
-    const goodStrings = ["I am a good string", "Best String"];
-
-    // Act
-    goodStrings.forEach(string => {
-      // Assert
-      const valid = validateMandatoryString(string);
-      expect(valid).toBe(true);
-    });
-  });
-
-  it("Should return true when input is 255 characters", () => {
-    // Arrange
-    const goodStrings = [
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,"
-    ];
+    const goodStrings = ["I am a good string", "Best String", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,"];
 
     // Act
     goodStrings.forEach(string => {
