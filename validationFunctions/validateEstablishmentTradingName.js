@@ -18,9 +18,7 @@ const validateEstablishmentTradingName = tradingName => {
     if (isEmpty(trim(tradingName))) {
       return false;
     }
-    return isAscii(tradingName) && tradingName.length <= 50 
-      ? true 
-      : false;
+    return isAscii(tradingName) && tradingName.length <= 50 ? true : false;
   }
   return false;
 };

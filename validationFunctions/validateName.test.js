@@ -14,7 +14,11 @@ describe("Function: validateName", () => {
 
   it("Should return true when the input is non-empty, ASCII and 70 characters or less", () => {
     //Arrange
-    const goodName = ["Joe", "Django!", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo"];
+    const goodName = [
+      "Joe",
+      "Django!",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo"
+    ];
     //Act
     goodName.forEach(name => {
       //Assert
