@@ -12,11 +12,11 @@ describe("Function: validateName", () => {
     });
   });
 
-  it("Should return true when the input is non-empty, ASCII and 70 characters or less", () => {
+  it("Should return true when the input is non-empty and 70 characters or less", () => {
     //Arrange
     const goodName = [
-      "Joe",
-      "Django!",
+      "Joe§",
+      "Django! Café",
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo"
     ];
     //Act
@@ -36,17 +36,6 @@ describe("Function: validateName", () => {
       expect(valid).toBe(false);
     });
     //Assert
-  });
-
-  it("Should return false if string contains non Ascii chars", () => {
-    //Arrange
-    const badNames = ["§", "¥", "«® ¢"];
-    //Act
-    badNames.forEach(name => {
-      //Assert
-      const valid = validateName(name);
-      expect(valid).toBe(false);
-    });
   });
 
   it("Should return false when input is 71 characters", () => {

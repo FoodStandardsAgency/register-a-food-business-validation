@@ -25,18 +25,6 @@ describe("Function: validateEstablishmentTradingName", () => {
     });
   });
 
-  it("Should return false if string contains non Ascii chars", () => {
-    // Arrange
-    const badTradingNames = ["§", "¥", "«® ¢"];
-
-    // Act
-    badTradingNames.forEach(tradingName => {
-      // Assert
-      const valid = validateEstablishmentTradingName(tradingName);
-      expect(valid).toBe(false);
-    });
-  });
-
   it("Should return false when input is 51 characters", () => {
     // Arrange
     const badStrings = ["Lorem ipsum dolor sit amet, consectetuer adipiscing"];
@@ -49,11 +37,11 @@ describe("Function: validateEstablishmentTradingName", () => {
     });
   });
 
-  it("Should return true if is non empty,Ascii and 50 characters or less", () => {
+  it("Should return true if is non empty and 50 characters or less", () => {
     // Arrange
     const goodTradingNames = [
-      "Anisha's awesome avacado place",
-      "Joe's Jolly Javahouse",
+      "Anisha's awesome avacado café",
+      "Joe's Jolly Javahou§e",
       "Lorem ipsum dolor sit amet, consectetuer adipiscin"
     ];
 
