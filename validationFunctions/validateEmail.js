@@ -14,8 +14,11 @@ const { isEmail, trim } = require("validator");
 
 const validateEmail = email => {
   if (typeof email === "string") {
-    const noWhiteSpaceEmail = trim(email);
-    return isEmail(noWhiteSpaceEmail);
+    if (email.length <= 254) {
+      const noWhiteSpaceEmail = trim(email);
+      return isEmail(noWhiteSpaceEmail);
+    }
+    return false;
   }
   return false;
 };
