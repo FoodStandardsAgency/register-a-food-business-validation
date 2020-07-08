@@ -12,12 +12,12 @@ describe("Function: validateName", () => {
     });
   });
 
-  it("Should return true when the input is non-empty and 70 characters or less", () => {
+  it("Should return true when the input is non-empty and 255 characters or less", () => {
     //Arrange
     const goodName = [
       "Joe§",
       "Django! Café",
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor"
     ];
     //Act
     goodName.forEach(name => {
@@ -38,10 +38,10 @@ describe("Function: validateName", () => {
     //Assert
   });
 
-  it("Should return false when input is 71 characters", () => {
+  it("Should return false when input is greater than 255 characters", () => {
     // Arrange
     const badStrings = [
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commod"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor."
     ];
 
     // Act

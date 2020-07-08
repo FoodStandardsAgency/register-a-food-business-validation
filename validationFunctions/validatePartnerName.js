@@ -18,7 +18,7 @@ const validatePartnerName = name => {
     if (isEmpty(trim(name))) {
       return false;
     }
-    return name.length > 56 ? false : true;
+    return name.length > 255 ? false : true;
   }
   return false;
 };

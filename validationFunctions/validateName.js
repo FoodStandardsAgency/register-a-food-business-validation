@@ -18,7 +18,7 @@ const validateName = name => {
     if (isEmpty(trim(name))) {
       return false;
     }
-    return name.length <= 70 ? true : false;
+    return name.length <= 255 ? true : false;
   }
   return false;
 };

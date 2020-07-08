@@ -18,7 +18,7 @@ const validateCompanyName = name => {
     if (isEmpty(trim(name))) {
       return false;
     }
-    return name.length > 50 ? false : true;
+    return name.length > 255 ? false : true;
   }
   return false;
 };

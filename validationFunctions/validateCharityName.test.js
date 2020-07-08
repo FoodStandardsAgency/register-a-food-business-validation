@@ -24,10 +24,10 @@ describe("Function: validateCharityName", () => {
     });
   });
 
-  it("should return false if charity name is more than 50 characters", () => {
+  it("should return false if charity name is more than 255 characters", () => {
     // Arrange
     const charityName =
-      "A very long charity name a very long charity name very long charity name very long charity name";
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor.";
 
     // Act
     const valid = validateCharityName(charityName);
@@ -47,9 +47,9 @@ describe("Function: validateCharityName", () => {
     expect(valid).toBe(true);
   });
 
-  it("should return true if charity name is less than 50 characters", () => {
+  it("should return true if charity name is less than 256 characters", () => {
     // Arrange
-    const charityName = "My charity name";
+    const charityName = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor";
 
     // Act
     const valid = validateCharityName(charityName);
