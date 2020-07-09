@@ -6,7 +6,7 @@
 const { isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on the name. It will be true if the input is an ASCII string. Empty string will return false as the field is mandatory.
+ * Runs custom validation on the name. It will be true if the input is less than 256 characters. Empty string will return false as the field is mandatory.
  *
  * @param {string} name The text string of the name the user supplies
  *

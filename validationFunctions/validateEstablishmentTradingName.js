@@ -6,7 +6,7 @@
 const { isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on the string trading name. It will be true if the input is an ASCII string. Empty string will return false as the field is mandatory.
+ * Runs custom validation on the string trading name. It will be true if the input is less than 256 characters. Empty string will return false as the field is mandatory.
  *
  * @param {string} tradingName The text string of the establishment trading name the user supplies
  *

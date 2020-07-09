@@ -6,7 +6,7 @@
 const { isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on the companies name. It will be true if the input is string of length less than 50 characters. Empty string will return false as the field is mandatory.
+ * Runs custom validation on the companies name. It will be true if the input is string of length less than 256 characters. Empty string will return false as the field is mandatory.
  *
  * @param {string} name The text string of the companies name the user supplies
  *
