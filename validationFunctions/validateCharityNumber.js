@@ -23,8 +23,7 @@ const validateCharityNumber = charityNumber => {
       return false;
     }
     if (
-      noWhiteSpaceCharityNumber.length > 8 ||
-      noWhiteSpaceCharityNumber.length < 6
+      noWhiteSpaceCharityNumber.length !== 8
     ) {
       return false;
     }
