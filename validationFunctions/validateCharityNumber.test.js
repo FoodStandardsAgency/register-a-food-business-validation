@@ -33,9 +33,9 @@ describe("Function: validateCharityNumber", () => {
     });
   });
 
-  it("should return false if charity number is greater than or less than 8 characters", () => {
+  it("should return false if charity number is greater than 8 characters or less than 6", () => {
     // Arrange
-    const charityNumbers = ["123456789", "1234567"];
+    const charityNumbers = ["123456789", "12345"];
 
     charityNumbers.forEach(charityNumber => {
       // Act
