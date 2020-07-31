@@ -48,36 +48,15 @@ describe("Function: validateCompaniesHouseNumber", () => {
     expect(valid).toBe(false);
   });
 
-  it("should return false if companies house number does not end with 6 numbers", () => {
+  it("should return true if companies house number is alphanumeric", () => {
     // Arrange
-    const chNumber = "123456AA";
+    const chNumbers = ["AA123456", "AA12345R", "13746274", "AKRMKGRN"];
 
     // Act
-    const valid = validateCompaniesHouseNumber(chNumber);
-
-    // Assert
-    expect(valid).toBe(false);
-  });
-
-  it("should return true if companies house is 8 numbers only", () => {
-    // Arrange
-    const chNumber = "12345678";
-
-    // Act
-    const valid = validateCompaniesHouseNumber(chNumber);
-
-    // Assert
-    expect(valid).toBe(true);
-  });
-
-  it("should return true if companies house number is two letters followed by six numbers", () => {
-    // Arrange
-    const chNumber = "AA123456";
-
-    // Act
-    const valid = validateCompaniesHouseNumber(chNumber);
-
-    // Assert
-    expect(valid).toBe(true);
+    chNumbers.forEach(chNumber => {
+      const valid = validateCompaniesHouseNumber(chNumber);
+      // Assert
+      expect(valid).toBe(true);
+    });
   });
 });
