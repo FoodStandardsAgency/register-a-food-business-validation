@@ -11,7 +11,7 @@ describe("Function: validate primary contact", () => {
     });
   });
 
-  it("Should remove the plus from the beginning of a number", () => {
+  it("Should remove the plus from the beginning of a number before checking the string is numeric", () => {
     //Arrange
     const goodNumber = "+54875875";
     //Act
@@ -20,9 +20,9 @@ describe("Function: validate primary contact", () => {
     expect(valid).toBe(true);
   });
 
-  it("Should return true when the input is non-empty and numeric", () => {
+  it("Should return true when the input is non-empty and numeric and between 5 and 20 characters inclusive", () => {
     //Arrange
-    const goodNumber = ["447462458575", "2874827482", "110248940242920"];
+    const goodNumber = ["44746", "2874827482", "11024894024292073849"];
     //Act
     goodNumber.forEach(number => {
       //Assert

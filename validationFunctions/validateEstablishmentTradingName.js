@@ -3,10 +3,10 @@
  * @module functions/validateEstablishmentTradingName
  */
 
-const { isAscii, isEmpty, trim } = require("validator");
+const { isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on the string trading name. It will be true if the input is an ASCII string. Empty string will return false as the field is mandatory.
+ * Runs custom validation on the string trading name. It will be true if the input is less than 256 characters. Empty string will return false as the field is mandatory.
  *
  * @param {string} tradingName The text string of the establishment trading name the user supplies
  *
@@ -18,7 +18,7 @@ const validateEstablishmentTradingName = tradingName => {
     if (isEmpty(trim(tradingName))) {
       return false;
     }
-    return isAscii(tradingName) ? true : false;
+    return tradingName.length <= 255 ? true : false;
   }
   return false;
 };

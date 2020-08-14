@@ -6,7 +6,7 @@
 const { isEmpty, trim, isAlphanumeric, blacklist } = require("validator");
 
 /**
- * Runs custom validation on the string charity number. After dashes are removed, it will be true if the input is an alphanumeric string of length 6 to 8 characters . Empty string will return false as the field is mandatory.
+ * Runs custom validation on the string charity number. After dashes are removed, it will be true if the input is an alphanumeric string. It will be true if the input is exactly 8 characters. Empty string will return false as the field is mandatory.
  *
  * @param {string} charityNumber The text string of the charity number the user supplies
  *
@@ -23,7 +23,7 @@ const validateCharityNumber = charityNumber => {
       return false;
     }
     if (
-      noWhiteSpaceCharityNumber.length > 8 ||
+      noWhiteSpaceCharityNumber.length > 8  ||
       noWhiteSpaceCharityNumber.length < 6
     ) {
       return false;

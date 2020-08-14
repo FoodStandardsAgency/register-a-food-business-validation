@@ -36,6 +36,17 @@ describe("Function: validateEmail", () => {
     });
   });
 
+  it("Should return false if greater than 254 characters", () => {
+    //Arrange
+    const badEmails = ["LoremipsumdolorsitametconsectetueradipiscingelitAeneancommodoligulaegetdolorAeneanmassa.CumsociisnatoquepenatibusetmagnisdisparturientmontesnasceturridiculusmusDonecquamfelisultriciesnecpellentesqueeupretiumquis@testyMctestemailaddressthatislongerthan254characters.com"];
+    //Act 
+    badEmails.forEach(email => {
+      //Assert
+      const valid = validateEmail(email);
+      expect(valid).toBe(false);
+    })
+  })
+
   it("Should return true if is non empty and valid email address", () => {
     // Arrange
     const goodEmails = [

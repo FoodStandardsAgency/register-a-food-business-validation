@@ -24,10 +24,10 @@ describe("Function: validatePartnerName", () => {
     });
   });
 
-  it("should return false if partner name is more than 56 characters", () => {
+  it("should return false if partner name is more than 255 characters", () => {
     // Arrange
     const partnerName =
-      "A very long partner name a very long partner name very long partner name";
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor.";
 
     // Act
     const valid = validatePartnerName(partnerName);
@@ -47,9 +47,9 @@ describe("Function: validatePartnerName", () => {
     expect(valid).toBe(true);
   });
 
-  it("should return true if partner name is less than 56 characters", () => {
+  it("should return true if partner name is less than 256 characters", () => {
     // Arrange
-    const partnerName = "My partner name";
+    const partnerName = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor";
 
     // Act
     const valid = validatePartnerName(partnerName);
