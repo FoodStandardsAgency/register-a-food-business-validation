@@ -1,13 +1,11 @@
 const validateDeclaration = require("./validationFunctions/validateDeclaration");
 const validateEmail = require("./validationFunctions/validateEmail");
-const validateFirstLine = require("./validationFunctions/validateFirstLine");
 const validateEstablishmentTradingName = require("./validationFunctions/validateEstablishmentTradingName");
 const validateName = require("./validationFunctions/validateName");
 const validatePhoneNumber = require("./validationFunctions/validatePhoneNumber");
 const validatePhoneNumberOptional = require("./validationFunctions/validatePhoneNumberOptional");
 const validatePostCode = require("./validationFunctions/validatePostCode");
 const validateOptionalString = require("./validationFunctions/validateOptionalString");
-const validateTown = require("./validationFunctions/validateTown");
 const validateCompanyName = require("./validationFunctions/validateCompanyName");
 const validateRadioButtons = require("./validationFunctions/validateRadioButtons");
 const validateCompaniesHouseNumber = require("./validationFunctions/validateCompaniesHouseNumber");
@@ -33,7 +31,6 @@ const validateMandatoryString = require("./validationFunctions/validateMandatory
 module.exports = {
   validateDeclaration,
   validateEmail,
-  validateFirstLine,
   validateEstablishmentTradingName,
   validateName,
   validatePhoneNumber,
@@ -41,7 +38,6 @@ module.exports = {
   validatePostCode,
   validateRadioButtons,
   validateOptionalString,
-  validateTown,
   validateCompanyName,
   validateCompaniesHouseNumber,
   validateCharityNumber,
