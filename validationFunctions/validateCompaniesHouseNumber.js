@@ -25,9 +25,6 @@ const validateCompaniesHouseNumber = chNumber => {
     if (isAlphanumeric(noWhiteSpaceNumber, "en-GB") === false) {
       return false;
     }
-    if (isNumeric(noWhiteSpaceNumber.substring(2)) === false) {
-      return false;
-    }
     return true;
   }
   return false;
