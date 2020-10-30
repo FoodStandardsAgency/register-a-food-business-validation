@@ -3,7 +3,7 @@
  * @module functions/validateBusinessOtherDetails
  */
 
-const { isEmpty, trim } = require("validator");
+const { isEmpty } = require("validator");
 
 /**
  * Runs custom validation on the string business other details. It will be true if the input is a string that is less than 1500 characters. Empty string will also return true as the field is optional.
