@@ -3,10 +3,10 @@
  * @module functions/validateName
  */
 
-const { isAscii, isEmpty, trim } = require("validator");
+const { isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on the name. It will be true if the input is an ASCII string. Empty string will return false as the field is mandatory.
+ * Runs custom validation on the name. It will be true if the input is less than 256 characters. Empty string will return false as the field is mandatory.
  *
  * @param {string} name The text string of the name the user supplies
  *
@@ -18,7 +18,7 @@ const validateName = name => {
     if (isEmpty(trim(name))) {
       return false;
     }
-    return isAscii(name) ? true : false;
+    return name.length <= 255 ? true : false;
   }
   return false;
 };

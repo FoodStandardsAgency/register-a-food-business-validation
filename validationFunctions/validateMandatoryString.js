@@ -6,7 +6,7 @@
 const { isAscii, isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on any optional string. It will be true if the input is an ASCII string. Empty string will return false as the field is mandatory.
+ * Runs custom validation on any optional string. It will be true if the input is an ASCII string. It will be trueif the input is less than 256 characters. Empty string will return false as the field is mandatory.
  *
  * @param {string} optionalString The text string the user supplies
  *
@@ -21,7 +21,9 @@ const validateMandatoryString = mandatoryString => {
     if (isEmpty(trim(mandatoryString))) {
       return false;
     }
-    return isAscii(mandatoryString) ? true : false;
+    return isAscii(mandatoryString) && mandatoryString.length <= 255
+      ? true
+      : false;
   }
   return false;
 };

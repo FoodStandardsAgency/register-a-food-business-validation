@@ -5,7 +5,7 @@
 const { isEmail, trim } = require("validator");
 
 /**
- * Runs custom validation on the string email. It will be true if the input is a valid email address compliant with the validator npm package. Empty string will return false as the field is mandatory.
+ * Runs custom validation on the string email. It will be true if the input is less than 256 characters. It will be true if the input is a valid email address compliant with the validator npm package. Empty string will return false as the field is mandatory.
  *
  * @param {string} email The text string of the email the user supplies
  *
@@ -14,8 +14,11 @@ const { isEmail, trim } = require("validator");
 
 const validateEmail = email => {
   if (typeof email === "string") {
-    const noWhiteSpaceEmail = trim(email);
-    return isEmail(noWhiteSpaceEmail);
+    if (email.length <= 255) {
+      const noWhiteSpaceEmail = trim(email);
+      return isEmail(noWhiteSpaceEmail);
+    }
+    return false;
   }
   return false;
 };
