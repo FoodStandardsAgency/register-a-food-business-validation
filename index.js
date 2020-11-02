@@ -2,6 +2,7 @@ const validateDeclaration = require("./validationFunctions/validateDeclaration")
 const validateEmail = require("./validationFunctions/validateEmail");
 const validateFirstLine = require("./validationFunctions/validateFirstLine");
 const validateEstablishmentTradingName = require("./validationFunctions/validateEstablishmentTradingName");
+const validateEstablishmentType = require("./validationFunctions/validateEstablishmentType");
 const validateName = require("./validationFunctions/validateName");
 const validatePhoneNumber = require("./validationFunctions/validatePhoneNumber");
 const validatePhoneNumberOptional = require("./validationFunctions/validatePhoneNumberOptional");
@@ -22,6 +23,7 @@ const validateImportExportActivities = require("./validationFunctions/validateIm
 const validateBusinessOtherDetails = require("./validationFunctions/validateBusinessOtherDetails");
 const validateOpeningDaysIrregular = require("./validationFunctions/validateOpeningDaysIrregular");
 const validateOpeningDay = require("./validationFunctions/validateOpeningDay");
+const validateOperatorType = require("./validationFunctions/validateOperatorType");
 const validatePartners = require("./validationFunctions/validatePartners");
 const validatePartnersHasPrimaryContact = require("./validationFunctions/validatePartnersHasPrimaryContact");
 const validatePartnerIsPrimaryContact = require("./validationFunctions/validatePartnerIsPrimaryContact");
@@ -29,12 +31,20 @@ const validatePartnerName = require("./validationFunctions/validatePartnerName")
 const validateWaterSupply = require("./validationFunctions/validateWaterSupply");
 const validateOpeningHours = require("./validationFunctions/validateOpeningHours");
 const validateMandatoryString = require("./validationFunctions/validateMandatoryString");
+const {
+  OperatorTypeEnum,
+  EstablishmentTypeEnum,
+  CustomerTypeEnum,
+  ImportExportActivitiesEnum,
+  WaterSupplyEnum
+} = require("./enums");
 
 module.exports = {
   validateDeclaration,
   validateEmail,
   validateFirstLine,
   validateEstablishmentTradingName,
+  validateEstablishmentType,
   validateName,
   validatePhoneNumber,
   validatePhoneNumberOptional,
@@ -55,11 +65,17 @@ module.exports = {
   validateBusinessOtherDetails,
   validateOpeningDaysIrregular,
   validateOpeningDay,
+  validateOperatorType,
   validatePartners,
   validatePartnersHasPrimaryContact,
   validatePartnerIsPrimaryContact,
   validatePartnerName,
   validateWaterSupply,
   validateOpeningHours,
-  validateMandatoryString
+  validateMandatoryString,
+  OperatorTypeEnum,
+  EstablishmentTypeEnum,
+  CustomerTypeEnum,
+  ImportExportActivitiesEnum,
+  WaterSupplyEnum
 };
