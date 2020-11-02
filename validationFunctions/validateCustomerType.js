@@ -3,6 +3,8 @@
  * @module functions/validateCustomerType
  */
 
+const { CustomerTypeEnum } = require("../enums");
+
 /**
  * Runs custom validation on the string customer type. It will be true if the input is any of the allowed values("Other businesses", "End consumer", "End consumer and other businesses"). Empty string will return false as the field is mandatory.
  *
@@ -11,16 +13,7 @@
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 const validateCustomerType = customerType => {
-  const allowedValues = [
-    "Other businesses",
-    "End consumer",
-    "End consumer and other businesses"
-  ];
-
-  if (allowedValues.includes(customerType)) {
-    return true;
-  }
-  return false;
+  return CustomerTypeEnum[customerType] ? true : false;
 };
 
 module.exports = validateCustomerType;

@@ -3,7 +3,7 @@ const validateWaterSupply = require("./validateWaterSupply");
 describe("Function: validateWaterSupply", () => {
   it("should return true when type is one of the three allowed types", () => {
     // Arrange
-    const allowedWaterSupply = ["Private", "Public", "Public and private"];
+    const allowedWaterSupply = ["PRIVATE", "PUBLIC", "BOTH"];
 
     // Act
     allowedWaterSupply.forEach(waterSupply => {

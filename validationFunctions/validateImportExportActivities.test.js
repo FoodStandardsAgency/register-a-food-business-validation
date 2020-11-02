@@ -3,12 +3,7 @@ const validateImportExportActivities = require("./validateImportExportActivities
 describe("Function: validateImportExportActivities", () => {
   it("should return true when type is one of the three allowed types", () => {
     // Arrange
-    const allowedImportExportActivities = [
-      "Directly import",
-      "Directly export",
-      "None",
-      "Directly import and export"
-    ];
+    const allowedImportExportActivities = ["IMPORT", "EXPORT", "NONE", "BOTH"];
 
     // Act
     allowedImportExportActivities.forEach(importExportActivities => {
