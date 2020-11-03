@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format:verify": "prettier --list-different validationFunctions/**/*.js ./valid-business-types.json",
-    "format": "prettier --write validationFunctions/**/*.js ./valid-business-types.json",
+    "format": "prettier --write validationFunctions/**/*.js ./businessTypeEnum.json",
     "lint": "eslint ./validationFunctions",
     "lint:fix": "eslint ./validationFunctions --fix",
     "test": "jest",

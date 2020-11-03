@@ -29,6 +29,7 @@ const validatePartnerName = require("./validationFunctions/validatePartnerName")
 const validateWaterSupply = require("./validationFunctions/validateWaterSupply");
 const validateOpeningHours = require("./validationFunctions/validateOpeningHours");
 const validateMandatoryString = require("./validationFunctions/validateMandatoryString");
+const BusinessTypeEnum = require("./businessTypeEnum.json")
 const {
   OperatorTypeEnum,
   EstablishmentTypeEnum,
@@ -69,6 +70,7 @@ module.exports = {
   validateWaterSupply,
   validateOpeningHours,
   validateMandatoryString,
+  BusinessTypeEnum,
   OperatorTypeEnum,
   EstablishmentTypeEnum,
   CustomerTypeEnum,

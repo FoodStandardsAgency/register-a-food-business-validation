@@ -3,7 +3,7 @@
  * @module functions/validateCompaniesHouseNumber
  */
 
-const { isEmpty, trim, isAlphanumeric, isNumeric } = require("validator");
+const { isEmpty, trim, isAlphanumeric } = require("validator");
 
 /**
  * Runs custom validation on the string companies house number. It will be true if the input is an alphanumeric string of length 8 characters, with the first two characters beig alphabetic and the last 6 being numeric. Empty string will return false as the field is mandatory.
