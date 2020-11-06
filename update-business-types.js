@@ -14,21 +14,23 @@ const updateBusinessTypesForAutocomplete = async () => {
   
   const businessTypeEnum = {};
 
-  function getDisplayNames(rdfsLabel) {
+  function getDisplayNames(prefLabel) {
     const displayNames = {};
-    if (Array.isArray(rdfsLabel)) {
-      rdfsLabel.forEach((label) => {
-        displayNames[label["@language"]] = label["@value"];
-      });
-    } else {
-      displayNames[rdfsLabel["@language"]] = rdfsLabel["@value"];
+    if (prefLabel) {
+      if (Array.isArray(prefLabel)) {
+        prefLabel.forEach((label) => {
+          displayNames[label["@language"]] = label["@value"];
+        });
+      } else {
+        displayNames[prefLabel["@language"]] = prefLabel["@value"];
+      }
     }
     return displayNames;
   }
 
   newBusinessTypesArray.forEach(businessType => {
-    const displayNames = getDisplayNames(businessType["rdfs:label"]);
-    if (businessType["skos:notation"]) {
+    const displayNames = getDisplayNames(businessType["skos:prefLabel"]);
+    if (businessType["skos:notation"] && displayNames.en) {
       businessTypeEnum[businessType["skos:notation"]] = { 
         key: businessType["skos:notation"],
         value: displayNames.en

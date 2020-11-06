@@ -20,15 +20,7 @@ const validateBusinessType = type => {
       return false;
     }
 
-    let matchesValidBusinessTypesList = false;
-    Object.keys(businessTypeEnum).forEach(validType => {
-      if (trim(type) === businessTypeEnum[validType].key) {
-        matchesValidBusinessTypesList = true;
-        return;
-      }
-    });
-
-    return matchesValidBusinessTypesList;
+    return businessTypeEnum[trim(type)] ? true : false;
   }
   return false;
 };
