@@ -74,11 +74,7 @@ describe("Function: validateCharityNumber", () => {
 
   it("should return true if companies house number is 8 characters, Alphanumeric and may contain dashes", () => {
     // Arrange
-    const charityNumbers = [
-      "12345678",
-      "12345-78",
-      "-1234567"
-    ];
+    const charityNumbers = ["12345678", "12345-78", "-1234567"];
 
     charityNumbers.forEach(charityNumber => {
       // Act

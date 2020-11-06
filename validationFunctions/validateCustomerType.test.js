@@ -3,11 +3,7 @@ const validateCustomerType = require("./validateCustomerType");
 describe("Function: validateCustomerType", () => {
   it("should return true when type is one of the three allowed types", () => {
     // Arrange
-    const allowedCustomerTypes = [
-      "Other businesses",
-      "End consumer",
-      "End consumer and other businesses"
-    ];
+    const allowedCustomerTypes = ["OTHER_BUSINESSES", "END_CONSUMER", "BOTH"];
 
     // Act
     allowedCustomerTypes.forEach(customerType => {

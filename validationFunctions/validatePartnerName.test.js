@@ -49,7 +49,8 @@ describe("Function: validatePartnerName", () => {
 
   it("should return true if partner name is less than 256 characters", () => {
     // Arrange
-    const partnerName = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor";
+    const partnerName =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor";
 
     // Act
     const valid = validatePartnerName(partnerName);

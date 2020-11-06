@@ -1,12 +1,12 @@
 {
   "name": "@slice-and-dice/register-a-food-business-validation",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "description": "Validation functions for the register a food business service",
   "main": "index.js",
   "scripts": {
-    "format:verify": "prettier --list-different validationFunctions/**/*.js ./valid-business-types.json",
-    "format": "prettier --write validationFunctions/**/*.js ./valid-business-types.json",
-    "lint": "eslint ./validationFunctions",
+    "format:verify": "prettier --list-different validationFunctions/**/*.js enums/**/*.js",
+    "format": "prettier --write validationFunctions/**/*.js enums/**/*.js",
+    "lint": "eslint ./validationFunctions ./enums",
     "lint:fix": "eslint ./validationFunctions --fix",
     "test": "jest",
     "test:watch": "jest --watch",

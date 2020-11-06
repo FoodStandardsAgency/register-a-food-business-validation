@@ -4,7 +4,7 @@
  */
 
 const { isEmpty, trim } = require("validator");
-const validBusinessTypes = require("../valid-business-types.json");
+const { businessTypeEnum } = require("../enums/businessTypeEnum");
 
 /**
  * Runs custom validation on the string business type. It will be true if the input matches a business type in the validBusinessTypes list. Empty string will return false as the field is mandatory.
@@ -20,15 +20,7 @@ const validateBusinessType = type => {
       return false;
     }
 
-    const trimmedValidBusinessTypes = validBusinessTypes.map(validType =>
-      trim(validType)
-    );
-
-    const matchesValidBusinessTypesList = trimmedValidBusinessTypes.includes(
-      trim(type)
-    );
-
-    return matchesValidBusinessTypesList;
+    return businessTypeEnum[trim(type)] ? true : false;
   }
   return false;
 };

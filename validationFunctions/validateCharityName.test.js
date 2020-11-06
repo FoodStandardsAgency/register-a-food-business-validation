@@ -49,7 +49,8 @@ describe("Function: validateCharityName", () => {
 
   it("should return true if charity name is less than 256 characters", () => {
     // Arrange
-    const charityName = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor";
+    const charityName =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor";
 
     // Act
     const valid = validateCharityName(charityName);

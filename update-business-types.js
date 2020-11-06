@@ -3,38 +3,50 @@ const fetch = require("node-fetch");
 
 const updateBusinessTypesForAutocomplete = async () => {
   const businessTypesData = await fetch(
-    "https://raw.githubusercontent.com/FoodStandardsAgency/Future-Risk-Engine-Development/master/business-types.json"
+    "https://data.food.gov.uk/codes/business/rafb/establishment-type?_format=jsonld"
   );
 
   const businessTypesJSON = await businessTypesData.json();
 
   const newBusinessTypesArray = Object.values(
-    JSON.parse(JSON.stringify(businessTypesJSON))
+    JSON.parse(JSON.stringify(businessTypesJSON["@graph"]))
   );
+  
+  const businessTypeEnum = {};
 
-  const transformedBusinessTypeArray = [];
-
-  newBusinessTypesArray.forEach(businessType => {
-    businessType.searchTerms.forEach(searchTerm => {
-      const newArrayEntry = businessType.displayName;
-      transformedBusinessTypeArray.push(newArrayEntry);
-    });
-  });
-
-  function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
+  function getDisplayNames(prefLabel) {
+    const displayNames = {};
+    if (prefLabel) {
+      if (Array.isArray(prefLabel)) {
+        prefLabel.forEach((label) => {
+          displayNames[label["@language"]] = label["@value"];
+        });
+      } else {
+        displayNames[prefLabel["@language"]] = prefLabel["@value"];
+      }
+    }
+    return displayNames;
   }
 
-  var uniqueBusinessTypes = transformedBusinessTypeArray.filter(onlyUnique);
+  newBusinessTypesArray.forEach(businessType => {
+    const displayNames = getDisplayNames(businessType["skos:prefLabel"]);
+    if (businessType["skos:notation"] && displayNames.en) {
+      businessTypeEnum[businessType["skos:notation"]] = { 
+        key: businessType["skos:notation"],
+        value: displayNames.en
+      };
+    }
+  });
 
+  const enumFilename = "./enums/businessTypeEnum.js";
   fs.writeFile(
-    "./valid-business-types.json",
-    JSON.stringify(uniqueBusinessTypes),
-    err => {
+    enumFilename,
+    `const businessTypeEnum=${JSON.stringify(businessTypeEnum)}; module.exports={businessTypeEnum};`,
+    (err) => {
       if (err) {
         return console.log(err);
       }
-      console.log("SUCCESS: /valid-business-types.json updated.");
+      console.log(`SUCCESS: ${enumFilename} updated.`);
     }
   );
 };
