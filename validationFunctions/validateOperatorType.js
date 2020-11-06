@@ -3,7 +3,7 @@
  * @module functions/validateOperatorType
  */
 
-const { OperatorTypeEnum } = require("../enums");
+const { operatorTypeEnum } = require("../enums/operatorTypeEnum");
 
 /**
  * Runs custom validation on the operator type. It will be true if the input is a valid operator type enum key.
@@ -14,7 +14,7 @@ const { OperatorTypeEnum } = require("../enums");
  */
 
 const validateOperatorType = operatorType => {
-  return OperatorTypeEnum[operatorType] ? true : false;
+  return operatorTypeEnum[operatorType] ? true : false;
 };
 
 module.exports = validateOperatorType;

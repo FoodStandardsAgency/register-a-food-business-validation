@@ -4,7 +4,7 @@
  */
 
 const { isEmpty, trim } = require("validator");
-const validBusinessTypes = require("../businessTypeEnum.json");
+const { businessTypeEnum } = require("../enums/businessTypeEnum");
 
 /**
  * Runs custom validation on the string business type. It will be true if the input matches a business type in the validBusinessTypes list. Empty string will return false as the field is mandatory.
@@ -21,8 +21,8 @@ const validateBusinessType = type => {
     }
 
     let matchesValidBusinessTypesList = false;
-    validBusinessTypes.forEach(validType => {
-      if (trim(type) === trim(validType.key)) {
+    Object.keys(businessTypeEnum).forEach(validType => {
+      if (trim(type) === businessTypeEnum[validType].key) {
         matchesValidBusinessTypesList = true;
         return;
       }

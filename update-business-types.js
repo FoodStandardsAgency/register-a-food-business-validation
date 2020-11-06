@@ -12,7 +12,7 @@ const updateBusinessTypesForAutocomplete = async () => {
     JSON.parse(JSON.stringify(businessTypesJSON["@graph"]))
   );
   
-  const businessTypeEnumArray = [];
+  const businessTypeEnum = {};
 
   function getDisplayNames(rdfsLabel) {
     const displayNames = {};
@@ -29,17 +29,17 @@ const updateBusinessTypesForAutocomplete = async () => {
   newBusinessTypesArray.forEach(businessType => {
     const displayNames = getDisplayNames(businessType["rdfs:label"]);
     if (businessType["skos:notation"]) {
-      businessTypeEnumArray.push({ 
+      businessTypeEnum[businessType["skos:notation"]] = { 
         key: businessType["skos:notation"],
         value: displayNames.en
-      });
+      };
     }
   });
 
-  const enumFilename = "./businessTypeEnum.json";
+  const enumFilename = "./enums/businessTypeEnum.js";
   fs.writeFile(
     enumFilename,
-    JSON.stringify(businessTypeEnumArray),
+    `const businessTypeEnum=${JSON.stringify(businessTypeEnum)}; module.exports={businessTypeEnum};`,
     (err) => {
       if (err) {
         return console.log(err);

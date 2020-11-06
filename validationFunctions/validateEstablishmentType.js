@@ -3,7 +3,7 @@
  * @module functions/validateEstablishmentType
  */
 
-const { EstablishmentTypeEnum } = require("../enums");
+const { establishmentTypeEnum } = require("../enums/establishmentTypeEnum");
 
 /**
  * Runs custom validation on the establishment type. It will be true if the input is a valid establishment type enum key.
@@ -14,7 +14,7 @@ const { EstablishmentTypeEnum } = require("../enums");
  */
 
 const validateEstablishmentType = establishmentType => {
-  return EstablishmentTypeEnum[establishmentType] ? true : false;
+  return establishmentTypeEnum[establishmentType] ? true : false;
 };
 
 module.exports = validateEstablishmentType;

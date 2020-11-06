@@ -29,14 +29,12 @@ const validatePartnerName = require("./validationFunctions/validatePartnerName")
 const validateWaterSupply = require("./validationFunctions/validateWaterSupply");
 const validateOpeningHours = require("./validationFunctions/validateOpeningHours");
 const validateMandatoryString = require("./validationFunctions/validateMandatoryString");
-const BusinessTypeEnum = require("./businessTypeEnum.json")
-const {
-  OperatorTypeEnum,
-  EstablishmentTypeEnum,
-  CustomerTypeEnum,
-  ImportExportActivitiesEnum,
-  WaterSupplyEnum
-} = require("./enums");
+const { businessTypeEnum } = require("./enums/businessTypeEnum.js")
+const { operatorTypeEnum } = require("./enums/operatorTypeEnum.js")
+const { establishmentTypeEnum } = require("./enums/establishmentTypeEnum.js")
+const { customerTypeEnum } = require("./enums/customerTypeEnum.js")
+const { importExportEnum } = require("./enums/importExportEnum.js")
+const { waterSupplyEnum } = require("./enums/waterSupplyEnum.js")
 
 module.exports = {
   validateDeclaration,
@@ -70,10 +68,10 @@ module.exports = {
   validateWaterSupply,
   validateOpeningHours,
   validateMandatoryString,
-  BusinessTypeEnum,
-  OperatorTypeEnum,
-  EstablishmentTypeEnum,
-  CustomerTypeEnum,
-  ImportExportActivitiesEnum,
-  WaterSupplyEnum
+  businessTypeEnum,
+  operatorTypeEnum,
+  establishmentTypeEnum,
+  customerTypeEnum,
+  importExportEnum,
+  waterSupplyEnum
 };
