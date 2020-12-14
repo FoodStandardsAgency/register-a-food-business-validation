@@ -1,7 +1,7 @@
 const businessTypeEnum = {
   "001": {
     key: "001",
-    value: { en: "Fruit and vegetable farm", cy: "Fferm ffrwythau a llysiau " },
+    value: { en: "Fruit and vegetable farm", cy: "Fferm ffrwythau a llysiau" },
     searchTerms: {
       en: ["farmer", "grower", "agriculture", "orchard"],
       cy: ["ffermwr", "tyfwr", "amaethyddiaeth", "perllan"]
@@ -1426,7 +1426,7 @@ const businessTypeEnum = {
     key: "056",
     value: {
       en: "Hostel or bed & breakfast",
-      cy: "Hostel neu lety gwely a brecwast "
+      cy: "Hostel neu lety gwely a brecwast"
     },
     searchTerms: {
       en: [

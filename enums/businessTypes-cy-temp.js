@@ -1,7 +1,7 @@
 const businessTypeEnum_cy = {
   "001": {
     key: "001",
-    value: "Fferm ffrwythau a llysiau ",
+    value: "Fferm ffrwythau a llysiau",
     searchTerms: ["ffermwr", "tyfwr", "amaethyddiaeth", "perllan"]
   },
   "002": {
@@ -806,7 +806,7 @@ const businessTypeEnum_cy = {
   },
   "056": {
     key: "056",
-    value: "Hostel neu lety gwely a brecwast ",
+    value: "Hostel neu lety gwely a brecwast",
     searchTerms: [
       "Gwely a brecwast",
       "&amp;",
