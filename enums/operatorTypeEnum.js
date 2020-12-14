@@ -1,23 +1,36 @@
 const operatorTypeEnum = {
   SOLETRADER: {
     key: "SOLETRADER",
-    value: "Sole trader"
+    value: {
+      en: "Sole trader",
+      cy: "Unig fasnachwr"
+    }
   },
   PARTNERSHIP: {
     key: "PARTNERSHIP",
-    value: "Partnership"
+    value: { en: "Partnership", cy: "Partneriaeth" }
   },
   PERSON: {
     key: "PERSON",
-    value: "A person (registered by a representative)"
+    value: {
+      en: "A person (registered by a representative)",
+      cy: "Person sy'n berchen ar y busnes bwyd neu sy'n ei weithredu"
+    }
   },
   COMPANY: {
     key: "COMPANY",
-    value: "A company (registered by a representative)"
+    value: {
+      en: "A company (registered by a representative)",
+      cy: "Cwmni cyfyngedig sy'n berchen ar y busnes bwyd neu sy'n ei weithredu"
+    }
   },
   CHARITY: {
     key: "CHARITY",
-    value: "A charity (registered by a representative)"
+    value: {
+      en: "A charity (registered by a representative)",
+      cy:
+        "Elusen, sefydliad neu ymddiriedolaeth sy'n berchen ar y busnes bwyd neu sy'n ei weithredu"
+    }
   }
 };
 

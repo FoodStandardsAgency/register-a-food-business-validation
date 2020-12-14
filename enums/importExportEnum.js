@@ -1,19 +1,19 @@
 const importExportEnum = {
   IMPORT: {
     key: "IMPORT",
-    value: "Directly import"
+    value: { en: "Directly import", cy: "Mewnforio bwyd yn uniongyrchol" }
   },
   EXPORT: {
     key: "EXPORT",
-    value: "Directly export"
+    value: { en: "Directly export", cy: "Allforio bwyd yn uniongyrchol" }
   },
   BOTH: {
     key: "BOTH",
-    value: "Directly import and export"
+    value: { en: "Directly import and export", cy: "Mewnforio ac allforio" }
   },
   NONE: {
     key: "NONE",
-    value: "None"
+    value: { en: "None", cy: "Dim gweithgareddau mewnforio nac allforio" }
   }
 };
 module.exports = { importExportEnum };
