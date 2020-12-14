@@ -1,15 +1,21 @@
 const establishmentTypeEnum = {
   COMMERCIAL: {
     key: "COMMERCIAL",
-    value: "Place of business or commercial premises"
+    value: {
+      en: "Place of business or commercial premises",
+      cy: "Mewn adeilad masnachol neu gyhoeddus"
+    }
   },
   MOBILE: {
     key: "MOBILE",
-    value: "Mobile or moveable premises"
+    value: { en: "Mobile or moveable premises", cy: "Mewn safle symudol" }
   },
   DOMESTIC: {
     key: "DOMESTIC",
-    value: "Home or domestic premises"
+    value: {
+      en: "Home or domestic premises",
+      cy: "Mewn cartref neu safle domestig"
+    }
   }
 };
 module.exports = { establishmentTypeEnum };

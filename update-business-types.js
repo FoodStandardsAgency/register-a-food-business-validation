@@ -1,6 +1,8 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 
+const { businessTypeEnum_cy } = require("./enums/businessTypes-cy-temp.js");
+
 // Mapping V2 Business Type strings to V1 strings
 const v1BusinessTypesMapping = {
   "Hunter and trapper": "Hunting and trapping",
@@ -56,8 +58,14 @@ const updateBusinessTypesEnum = async () => {
     if (businessType["skos:notation"] && displayNames.en) {
       businessTypeEnum[businessType["skos:notation"]] = {
         key: businessType["skos:notation"],
-        value: displayNames.en,
-        searchTerms: []
+        value: {
+          en: displayNames.en,
+          cy: businessTypeEnum_cy[businessType["skos:notation"]].value // Temporarily use hard coded welsh translations until source repos are updated
+        },
+        searchTerms: {
+          en: [],
+          cy: businessTypeEnum_cy[businessType["skos:notation"]].searchTerms // Temporarily use hard coded welsh translations until source repos are updated
+        }
       };
     }
   });
@@ -67,13 +75,13 @@ const updateBusinessTypesEnum = async () => {
   newSearchTermDataArray.forEach(searchTermData => {
     const businessTypeKey = businessTypeKeys.find(
       key =>
-        searchTermData.displayName === businessTypeEnum[key].value ||
+        searchTermData.displayName === businessTypeEnum[key].value.en ||
         searchTermData.displayName ===
-          v1BusinessTypesMapping[businessTypeEnum[key].value]
+          v1BusinessTypesMapping[businessTypeEnum[key].value.en]
     );
 
     if (businessTypeKey) {
-      businessTypeEnum[businessTypeKey].searchTerms =
+      businessTypeEnum[businessTypeKey].searchTerms.en =
         searchTermData.searchTerms;
     }
   });

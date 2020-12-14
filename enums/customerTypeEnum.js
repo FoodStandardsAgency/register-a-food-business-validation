@@ -1,15 +1,24 @@
 const customerTypeEnum = {
   OTHER_BUSINESSES: {
     key: "OTHER_BUSINESSES",
-    value: "Other businesses"
+    value: {
+      en: "Other businesses",
+      cy: "Fusnesau eraill"
+    }
   },
   END_CONSUMER: {
     key: "END_CONSUMER",
-    value: "End consumer"
+    value: {
+      en: "End consumer",
+      cy: "Yn uniongyrchol i ddefnyddwyr"
+    }
   },
   BOTH: {
     key: "BOTH",
-    value: "End consumer and other businesses"
+    value: {
+      en: "End consumer and other businesses",
+      cy: "Yn uniongyrchol i ddefnyddwyr a fusnesau eraill"
+    }
   }
 };
 
