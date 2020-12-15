@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.20.0 - 14 December 2020 (released)
+
+- Updated Enum definitions to contain search terms and welsh translations
+
 ## v1.17.0 - 30 January 2020 (released)
 
 - Added validateMandatoryString function
