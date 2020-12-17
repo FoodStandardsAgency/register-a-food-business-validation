@@ -1482,7 +1482,7 @@ const businessTypeEnum = {
   },
   "058": {
     key: "058",
-    value: { en: "Pub serving meals", cy: "Tafarn sy’n gweini prydau " },
+    value: { en: "Pub serving meals", cy: "Tafarn sy’n gweini prydau" },
     searchTerms: {
       en: [
         "bar",
