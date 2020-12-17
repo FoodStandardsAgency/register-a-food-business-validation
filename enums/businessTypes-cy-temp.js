@@ -836,7 +836,7 @@ const businessTypeEnum_cy = {
   },
   "058": {
     key: "058",
-    value: "Tafarn sy’n gweini prydau ",
+    value: "Tafarn sy’n gweini prydau",
     searchTerms: [
       "bar",
       "alcohol",
