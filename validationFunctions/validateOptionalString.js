@@ -3,17 +3,19 @@
  * @module functions/validateOptionalString
  */
 
-const { isAscii, isEmpty, trim } = require("validator");
+const { isEmpty, trim } = require("validator");
 
 /**
- * Runs custom validation on any optional string. It will be true if the input is an ASCII string. It will be true if the input is less than 256 characters. Empty string will return true as the field is optional.
+ * Runs custom validation on any optional string. It will be true if the input is less than 256 characters. Empty string will return true as the field is optional.
  *
  * @param {string} optionalString The text string the user supplies
  *
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateOptionalString = optionalString => {
+const validateOptionalString = (
+  optionalString
+) => {
   if (typeof optionalString === "string") {
     if (isEmpty(optionalString)) {
       return true;
@@ -21,7 +23,7 @@ const validateOptionalString = optionalString => {
     if (isEmpty(trim(optionalString))) {
       return false;
     }
-    return isAscii(optionalString) && optionalString.length <= 255
+    return optionalString.length <= 255
       ? true
       : false;
   }
