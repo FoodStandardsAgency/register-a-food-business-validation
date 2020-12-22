@@ -36,10 +36,10 @@ describe("Function: validateMandatoryString", () => {
 
   it("Should return true if string contains non Ascii chars", () => {
     // Arrange
-    const badStrings = ["§", "¥", "«® ¢"];
+    const nonAsciiStrings = ["§", "¥", "«® ¢"];
 
     // Act
-    badStrings.forEach((string) => {
+    nonAsciiStrings.forEach((string) => {
       // Assert
       const valid = validateMandatoryString(
         string
