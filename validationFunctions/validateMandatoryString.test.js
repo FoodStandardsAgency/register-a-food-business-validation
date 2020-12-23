@@ -5,9 +5,11 @@ describe("Function: validateMandatoryString", () => {
     // Arrange
     const badString = [[], {}, null, undefined];
     // Act
-    badString.forEach(string => {
+    badString.forEach((string) => {
       // Assert
-      const valid = validateMandatoryString(string);
+      const valid = validateMandatoryString(
+        string
+      );
       expect(valid).toBe(false);
     });
   });
@@ -32,30 +34,34 @@ describe("Function: validateMandatoryString", () => {
     expect(valid).toBe(false);
   });
 
-  it("Should return false if string contains non Ascii chars", () => {
+  it("Should return true if string contains non Ascii chars", () => {
     // Arrange
-    const badStrings = ["§", "¥", "«® ¢"];
+    const nonAsciiStrings = ["§", "¥", "«® ¢"];
 
     // Act
-    badStrings.forEach(string => {
+    nonAsciiStrings.forEach((string) => {
       // Assert
-      const valid = validateMandatoryString(string);
-      expect(valid).toBe(false);
+      const valid = validateMandatoryString(
+        string
+      );
+      expect(valid).toBe(true);
     });
   });
 
-  it("Should return true when input is Ascii string and 255 characters or less", () => {
+  it("Should return true when input is 255 characters or less", () => {
     // Arrange
     const goodStrings = [
       "I am a good string",
       "Best String",
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,"
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,",
     ];
 
     // Act
-    goodStrings.forEach(string => {
+    goodStrings.forEach((string) => {
       // Assert
-      const valid = validateMandatoryString(string);
+      const valid = validateMandatoryString(
+        string
+      );
       expect(valid).toBe(true);
     });
   });
@@ -63,13 +69,15 @@ describe("Function: validateMandatoryString", () => {
   it("Should return false when input is 256 characters", () => {
     // Arrange
     const badStrings = [
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,."
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,.",
     ];
 
     // Act
-    badStrings.forEach(string => {
+    badStrings.forEach((string) => {
       // Assert
-      const valid = validateMandatoryString(string);
+      const valid = validateMandatoryString(
+        string
+      );
       expect(valid).toBe(false);
     });
   });
