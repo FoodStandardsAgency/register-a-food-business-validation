@@ -1,6 +1,6 @@
 /**
  * Function for validating the partners array
- * @module functions/validatePartnersAreDifferent
+ * @module functions/validatePartnersAreUnique
  */
 
 /**
@@ -11,19 +11,11 @@
  * @returns {boolean} It will return true if the argument is an array with no duplicate partner values, false otherwise.
  */
 
-const validatePartnersAreDifferent = (
-  partners
-) => {
-  var i;
-  for (i = 1; i < partners.length; i++) {
-    if (
-      partners[i - 1].name === partners[i].name
-    ) {
-      return false;
-    } else {
-      return true;
-    }
-  }
+const validatePartnersAreUnique = (partners) => {
+  var uniquePartners = new Set(
+    partners.map((partner) => partner.name)
+  );
+  return uniquePartners.size === partners.length;
 };
 
-module.exports = validatePartnersAreDifferent;
+module.exports = validatePartnersAreUnique;
