@@ -87,5 +87,5 @@ module.exports = {
   establishmentTypeEnum,
   customerTypeEnum,
   importExportEnum,
-  waterSupplyEnum,
+  waterSupplyEnum
 };
