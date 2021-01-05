@@ -12,9 +12,7 @@
  */
 
 const validatePartnersAreUnique = (partners) => {
-  var uniquePartners = new Set(
-    partners.map((partner) => partner.name)
-  );
+  var uniquePartners = new Set(partners);
   return uniquePartners.size === partners.length;
 };
 
