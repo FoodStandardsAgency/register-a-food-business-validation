@@ -23,6 +23,7 @@ const validateOpeningDaysIrregular = require("./validationFunctions/validateOpen
 const validateOpeningDay = require("./validationFunctions/validateOpeningDay");
 const validateOperatorType = require("./validationFunctions/validateOperatorType");
 const validatePartners = require("./validationFunctions/validatePartners");
+const validatePartnersAreUnique = require("./validationFunctions/validatePartnersAreUnique");
 const validatePartnersHasPrimaryContact = require("./validationFunctions/validatePartnersHasPrimaryContact");
 const validatePartnerIsPrimaryContact = require("./validationFunctions/validatePartnerIsPrimaryContact");
 const validatePartnerName = require("./validationFunctions/validatePartnerName");
@@ -63,6 +64,7 @@ module.exports = {
   validateOpeningDay,
   validateOperatorType,
   validatePartners,
+  validatePartnersAreUnique,
   validatePartnersHasPrimaryContact,
   validatePartnerIsPrimaryContact,
   validatePartnerName,
