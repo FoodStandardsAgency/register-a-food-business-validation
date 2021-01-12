@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.21.1 - 04 January 2021 (released)
+
+- Editted to take into account structure type of partners being fed into the validatePartnersAReUNique function.
+
+## v1.21.0 - 04 January 2021 (released)
+
+- Added validatePartnersAreDifferent file to check that no duplicate partner names are allowed
+
 ## v1.20.3 - 22 December 2020 (released)
 
 - Updated Mandatory and Optional strings to allow non-ASCII characters
