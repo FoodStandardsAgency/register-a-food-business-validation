@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## v1.21.2 - 04 January 2021
+## v1.21.2 - 12 January 2021
 
 - Added validateFsaReferenceNumber for direct submissions
 
