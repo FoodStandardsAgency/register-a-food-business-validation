@@ -5,11 +5,9 @@ describe("Function: validateOptionalString", () => {
     // Arrange
     const badString = [[], {}, null, undefined];
     // Act
-    badString.forEach((string) => {
+    badString.forEach(string => {
       // Assert
-      const valid = validateOptionalString(
-        string
-      );
+      const valid = validateOptionalString(string);
       expect(valid).toBe(false);
     });
   });
@@ -39,11 +37,9 @@ describe("Function: validateOptionalString", () => {
     const nonAsciiStrings = ["§", "¥", "«® ¢"];
 
     // Act
-    nonAsciiStrings.forEach((string) => {
+    nonAsciiStrings.forEach(string => {
       // Assert
-      const valid = validateOptionalString(
-        string
-      );
+      const valid = validateOptionalString(string);
       expect(valid).toBe(true);
     });
   });
@@ -53,15 +49,13 @@ describe("Function: validateOptionalString", () => {
     const goodStrings = [
       "I am a good string",
       "Best String",
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,"
     ];
 
     // Act
-    goodStrings.forEach((string) => {
+    goodStrings.forEach(string => {
       // Assert
-      const valid = validateOptionalString(
-        string
-      );
+      const valid = validateOptionalString(string);
       expect(valid).toBe(true);
     });
   });
@@ -69,15 +63,13 @@ describe("Function: validateOptionalString", () => {
   it("Should return false when input is 256 characters", () => {
     // Arrange
     const badStrings = [
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,."
     ];
 
     // Act
-    badStrings.forEach((string) => {
+    badStrings.forEach(string => {
       // Assert
-      const valid = validateOptionalString(
-        string
-      );
+      const valid = validateOptionalString(string);
       expect(valid).toBe(false);
     });
   });
