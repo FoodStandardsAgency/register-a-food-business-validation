@@ -13,9 +13,7 @@ const { isEmpty, trim } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateOptionalString = (
-  optionalString
-) => {
+const validateOptionalString = optionalString => {
   if (typeof optionalString === "string") {
     if (isEmpty(optionalString)) {
       return true;
@@ -23,9 +21,7 @@ const validateOptionalString = (
     if (isEmpty(trim(optionalString))) {
       return false;
     }
-    return optionalString.length <= 255
-      ? true
-      : false;
+    return optionalString.length <= 255 ? true : false;
   }
   return false;
 };
