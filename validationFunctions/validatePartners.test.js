@@ -84,9 +84,7 @@ describe("Function: validatePartners", () => {
     //Assert
     expect(valid).toBe(true);
   });
-});
 
-describe("Function: validatePartners", () => {
   it("Should return false if consecutive values in array are duplicated", () => {
     //Arrange
     const duplicatesPartnersArray = [

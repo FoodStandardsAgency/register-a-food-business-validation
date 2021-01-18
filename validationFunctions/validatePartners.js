@@ -20,8 +20,6 @@ const validatePartners = (partners) => {
       uniquePartners.size === partners.length
     ) {
       return true;
-    } else {
-      return false;
     }
   }
   return false;
