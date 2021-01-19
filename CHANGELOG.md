@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.21.3 - 18 January 2021 (released)
+
+- Editted to take to combine validatePartners with validatePartnersAreUnique function.
+
 ## v1.21.2 - 12 January 2021
 
 - Added validateFsaReferenceNumber for direct submissions

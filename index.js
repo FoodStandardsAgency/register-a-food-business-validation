@@ -23,7 +23,6 @@ const validateOpeningDaysIrregular = require("./validationFunctions/validateOpen
 const validateOpeningDay = require("./validationFunctions/validateOpeningDay");
 const validateOperatorType = require("./validationFunctions/validateOperatorType");
 const validatePartners = require("./validationFunctions/validatePartners");
-const validatePartnersAreUnique = require("./validationFunctions/validatePartnersAreUnique");
 const validatePartnersHasPrimaryContact = require("./validationFunctions/validatePartnersHasPrimaryContact");
 const validatePartnerIsPrimaryContact = require("./validationFunctions/validatePartnerIsPrimaryContact");
 const validatePartnerName = require("./validationFunctions/validatePartnerName");
@@ -31,12 +30,24 @@ const validateWaterSupply = require("./validationFunctions/validateWaterSupply")
 const validateOpeningHours = require("./validationFunctions/validateOpeningHours");
 const validateMandatoryString = require("./validationFunctions/validateMandatoryString");
 const validateFsaReferenceNumber = require("./validationFunctions/validateFsaRn");
-const { businessTypeEnum } = require("./enums/businessTypeEnum.js")
-const { operatorTypeEnum } = require("./enums/operatorTypeEnum.js")
-const { establishmentTypeEnum } = require("./enums/establishmentTypeEnum.js")
-const { customerTypeEnum } = require("./enums/customerTypeEnum.js")
-const { importExportEnum } = require("./enums/importExportEnum.js")
-const { waterSupplyEnum } = require("./enums/waterSupplyEnum.js")
+const {
+  businessTypeEnum,
+} = require("./enums/businessTypeEnum.js");
+const {
+  operatorTypeEnum,
+} = require("./enums/operatorTypeEnum.js");
+const {
+  establishmentTypeEnum,
+} = require("./enums/establishmentTypeEnum.js");
+const {
+  customerTypeEnum,
+} = require("./enums/customerTypeEnum.js");
+const {
+  importExportEnum,
+} = require("./enums/importExportEnum.js");
+const {
+  waterSupplyEnum,
+} = require("./enums/waterSupplyEnum.js");
 
 module.exports = {
   validateDeclaration,
@@ -64,7 +75,6 @@ module.exports = {
   validateOpeningDay,
   validateOperatorType,
   validatePartners,
-  validatePartnersAreUnique,
   validatePartnersHasPrimaryContact,
   validatePartnerIsPrimaryContact,
   validatePartnerName,
