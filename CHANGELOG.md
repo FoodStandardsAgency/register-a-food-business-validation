@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.21.6 - 19 January 2021 (released)
+
+ - Updated welsh search terms
+
 ## v1.21.3 - 18 January 2021 (released)
 
 - Editted to take to combine validatePartners with validatePartnersAreUnique function.
