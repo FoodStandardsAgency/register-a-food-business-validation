@@ -5,7 +5,7 @@
 const { isURL, trim } = require("validator");
 
 /**
- * Runs custom validation on the string web address. It will be true if the input is less than 256 characters. It will be true if the input is a valid web address compliant with the validator npm package. 
+ * Runs custom validation on the string web address. It will be true if the input is less than 256 characters. It will be true if the input is a valid web address compliant with the validator npm package.
  *
  * @param {string} webAddress The text string of the web address the user supplies
  *
@@ -13,7 +13,7 @@ const { isURL, trim } = require("validator");
  */
 
 const validateWebAddress = webAddress => {
-  if (typeof webAddress === "string" ) {
+  if (typeof webAddress === "string") {
     if (webAddress.length <= 255) {
       const noWhiteSpaceWebAddress = trim(webAddress);
       return isURL(noWhiteSpaceWebAddress);

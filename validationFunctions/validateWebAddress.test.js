@@ -3,7 +3,11 @@ const validateWebAddress = require("./validateWebAddress");
 describe("Function: validateWebAddress", () => {
   it("Should return false if string is not a valid web address", () => {
     // Arrange
-    const badWebAddress = ["badwebAddress", "badwebAddress@badwebAddress", "iamabadwebAddress1"];
+    const badWebAddress = [
+      "badwebAddress",
+      "badwebAddress@badwebAddress",
+      "iamabadwebAddress1"
+    ];
     // Act
     badWebAddress.forEach(webAddress => {
       // Assert
