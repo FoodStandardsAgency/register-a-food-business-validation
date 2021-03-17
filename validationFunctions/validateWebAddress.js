@@ -1,11 +1,11 @@
 /**
- * Function for validating the web address optional field
+ * Function for validating the web address optional string
  * @module functions/validateWebAddress
  */
-const { isURL, trim } = require("validator");
+const { isURL, trim, isEmpty } = require("validator");
 
 /**
- * Runs custom validation on the string web address. It will be true if the input is less than 256 characters. It will be true if the input is a valid web address compliant with the validator npm package.
+ * Runs custom validation on the string web address. It will be true if the input is less than 256 characters. It will be true if the input is a valid web address compliant with the validator npm package. Empty string will return true as the field is optional.
  *
  * @param {string} webAddress The text string of the web address the user supplies
  *
@@ -16,6 +16,12 @@ const validateWebAddress = webAddress => {
   if (typeof webAddress === "string") {
     if (webAddress.length <= 255) {
       const noWhiteSpaceWebAddress = trim(webAddress);
+      if (isEmpty(webAddress)) {
+        return true;
+      }
+      if (isEmpty(noWhiteSpaceWebAddress)) {
+        return false;
+      }
       return isURL(noWhiteSpaceWebAddress);
     }
     return false;

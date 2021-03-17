@@ -16,6 +16,26 @@ describe("Function: validateWebAddress", () => {
     });
   });
 
+  it("Should return true when input is empty", () => {
+    // Arrange
+    const emptyField = "";
+    // Act
+  
+      // Assert
+      const valid = validateWebAddress(emptyField);
+      expect(valid).toBe(true);
+  });
+
+  it("Should return false when input is blank string", () => {
+    // Arrange
+    const badWebAddress = "  ";
+    // Act
+  
+      // Assert
+      const valid = validateWebAddress(badWebAddress);
+      expect(valid).toBe(false);
+  });
+  
   it("Should return false if greater than 254 characters", () => {
     //Arrange
     const badWebAddress = [

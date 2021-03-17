@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.22.2 - 17 March 2021 (released)
+
+ - Web address defaults to true if field not filled
+
 ## v1.22.1 - 17 March 2021 (released)
 
  - Exported web address validation function
