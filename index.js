@@ -30,6 +30,7 @@ const validateWaterSupply = require("./validationFunctions/validateWaterSupply")
 const validateOpeningHours = require("./validationFunctions/validateOpeningHours");
 const validateMandatoryString = require("./validationFunctions/validateMandatoryString");
 const validateFsaReferenceNumber = require("./validationFunctions/validateFsaRn");
+const validateWebAddress = require("./validationFunctions/validateWebAddress");
 const {
   businessTypeEnum,
 } = require("./enums/businessTypeEnum.js");
@@ -82,6 +83,7 @@ module.exports = {
   validateOpeningHours,
   validateMandatoryString,
   validateFsaReferenceNumber,
+  validateWebAddress,
   businessTypeEnum,
   operatorTypeEnum,
   establishmentTypeEnum,
