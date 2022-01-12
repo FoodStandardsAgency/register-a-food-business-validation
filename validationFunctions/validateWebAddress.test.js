@@ -62,9 +62,3 @@ describe("Function: validate web address", () => {
     });
   });
 });
-
-
-
-
-
-
