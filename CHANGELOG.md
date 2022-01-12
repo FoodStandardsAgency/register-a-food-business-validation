@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.21.7 - 12 January 2022
+
+- Added validatewebAddress for web address
+
 ## v1.21.6 - 19 January 2021 (released)
 
  - Updated welsh search terms
