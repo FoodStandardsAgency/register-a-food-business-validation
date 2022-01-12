@@ -11,7 +11,7 @@
  * @returns {boolean} It will return true if the argument is an array with a minimum of 2 and a maximum of 5 items with no duplicate partner values, false otherwise.
  */
 
-const validatePartners = (partners) => {
+const validatePartners = partners => {
   if (Array.isArray(partners)) {
     var uniquePartners = new Set(partners);
     if (
