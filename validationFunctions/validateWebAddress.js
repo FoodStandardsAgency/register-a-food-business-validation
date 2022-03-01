@@ -14,11 +14,11 @@ const { isURL, trim, isEmpty } = require("validator");
 
 const validateWebAddress = webAddress => {
   if (typeof webAddress === "string") {
-    const noWhiteSpaceWebAddress = trim(webAddress);
     if (isEmpty(webAddress)) {
       return true;
     }
     if (webAddress.length <= 255) {
+      const noWhiteSpaceWebAddress = trim(webAddress);
       if (isEmpty(noWhiteSpaceWebAddress)) {
         return false;
       }
