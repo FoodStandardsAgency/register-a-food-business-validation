@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.22.4 - 01 March 2022 (released)
+
+ - Web address returns true if string is ev
+
+## v1.22.3 - 01 March 2022 (released)
+
+ - Web address returns true if string is empty fix
+
+## v1.22.2 - 17 March 2021 (released)
+
+ - Web address defaults to true if field not filled
+
+## v1.22.1 - 17 March 2021 (released)
+
+ - Exported web address validation function
+
+## v1.22.0 - 17 March 2021 (released)
+
+ - Added validation function for web address
+
 ## v1.21.6 - 19 January 2021 (released)
 
  - Updated welsh search terms
