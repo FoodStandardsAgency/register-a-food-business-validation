@@ -331,7 +331,7 @@ const businessTypeEnum_cy = {
       "seliag",
       "lactos",
       "babanod",
-      "atchwanegia",
+      "atchwanegiad",
       "supplement",
       "maeth",
       "meddygol",
