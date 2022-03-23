@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.22.5 - 23 March 2022 (released)
+
+ - Business type tranlsation correction
+
 ## v1.22.4 - 01 March 2022 (released)
 
  - Web address returns true if string is ev
