@@ -627,7 +627,7 @@ const businessTypeEnum = {
         "seliag",
         "lactos",
         "babanod",
-        "atchwanegia",
+        "atchwanegiad",
         "supplement",
         "maeth",
         "meddygol",
