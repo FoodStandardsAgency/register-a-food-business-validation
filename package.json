@@ -24,16 +24,16 @@
   },
   "homepage": "https://github.com/slice-and-dice/register-a-food-business-validation#readme",
   "dependencies": {
-    "moment": "^2.22.2",
-    "validator": "^10.4.0"
+    "moment": "^2.29.3",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "jest": "24.8.0",
-    "jsdoc": "3.5.5",
-    "node-fetch": "^2.3.0",
-    "prettier": "^1.13.5"
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.1",
+    "jsdoc": "^3.6.10",
+    "node-fetch": "^3.2.6",
+    "prettier": "^2.7.1"
   }
 }
