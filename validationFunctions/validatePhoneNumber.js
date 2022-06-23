@@ -13,7 +13,7 @@ const { isNumeric } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validatePhoneNumber = phoneNumber => {
+const validatePhoneNumber = (phoneNumber) => {
   if (typeof phoneNumber === "string") {
     phoneNumber = phoneNumber.split(" ").join("");
     if (phoneNumber.startsWith("+")) {

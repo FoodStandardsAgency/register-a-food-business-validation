@@ -14,7 +14,7 @@ const { isEmpty } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateFsaReferenceNumber = fsarn => {
+const validateFsaReferenceNumber = (fsarn) => {
   if (typeof fsarn === "string") {
     if (isEmpty(fsarn)) {
       return true;

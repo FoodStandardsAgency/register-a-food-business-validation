@@ -5,7 +5,7 @@ describe("Function: validateOpeningDay", () => {
     // Arrange
     const badDay = [[], {}, null, undefined, "", "true", "false"];
     // Act
-    badDay.forEach(day => {
+    badDay.forEach((day) => {
       // Assert
       const valid = validateOpeningDay(day);
       expect(valid).toBe(false);
@@ -16,7 +16,7 @@ describe("Function: validateOpeningDay", () => {
     //Arrange
     const goodDay = [true, false];
     //Act
-    goodDay.forEach(day => {
+    goodDay.forEach((day) => {
       //Assert
       const valid = validateOpeningDay(day);
       expect(valid).toBe(true);

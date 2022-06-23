@@ -12,7 +12,7 @@ const { waterSupplyEnum } = require("../enums/waterSupplyEnum");
  *
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
-const validateWaterSupply = waterSupply => {
+const validateWaterSupply = (waterSupply) => {
   return waterSupplyEnum[waterSupply] ? true : false;
 };
 

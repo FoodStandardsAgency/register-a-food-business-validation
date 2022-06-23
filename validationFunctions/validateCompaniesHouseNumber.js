@@ -13,7 +13,7 @@ const { isEmpty, trim, isAlphanumeric } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateCompaniesHouseNumber = chNumber => {
+const validateCompaniesHouseNumber = (chNumber) => {
   if (typeof chNumber === "string") {
     const noWhiteSpaceNumber = trim(chNumber);
     if (isEmpty(noWhiteSpaceNumber)) {

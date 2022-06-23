@@ -7,7 +7,7 @@ describe("Function: validatePastDate", () => {
     const badInput = [[], {}, null, undefined];
 
     // Act
-    badInput.forEach(input => {
+    badInput.forEach((input) => {
       const result = validatePastDate(input);
 
       // Assert
@@ -39,9 +39,7 @@ describe("Function: validatePastDate", () => {
 
   it("should return false when input is in the future", () => {
     // Arrange
-    const futureDate = moment()
-      .add(7, "d")
-      .format("YYYY-MM-DD");
+    const futureDate = moment().add(7, "d").format("YYYY-MM-DD");
 
     // Act
     const result = validatePastDate(futureDate);

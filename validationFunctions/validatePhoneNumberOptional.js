@@ -14,7 +14,7 @@ const validatePhoneNumber = require("./validatePhoneNumber");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validatePhoneNumberOptional = phoneNumber => {
+const validatePhoneNumberOptional = (phoneNumber) => {
   if (typeof phoneNumber === "string") {
     if (isEmpty(phoneNumber)) {
       return true;

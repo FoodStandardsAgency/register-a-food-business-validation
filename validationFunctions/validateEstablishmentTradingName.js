@@ -13,7 +13,7 @@ const { isEmpty, trim } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateEstablishmentTradingName = tradingName => {
+const validateEstablishmentTradingName = (tradingName) => {
   if (typeof tradingName === "string") {
     if (isEmpty(trim(tradingName))) {
       return false;

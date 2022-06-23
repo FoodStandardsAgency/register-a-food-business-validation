@@ -12,7 +12,7 @@ const { importExportEnum } = require("../enums/importExportEnum");
  *
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
-const validateImportExportActivities = importExportActivities => {
+const validateImportExportActivities = (importExportActivities) => {
   return importExportEnum[importExportActivities] ? true : false;
 };
 

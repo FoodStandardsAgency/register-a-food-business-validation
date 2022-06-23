@@ -14,7 +14,7 @@ const { businessTypeEnum } = require("../enums/businessTypeEnum");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateBusinessType = type => {
+const validateBusinessType = (type) => {
   if (typeof type === "string") {
     if (isEmpty(trim(type))) {
       return false;

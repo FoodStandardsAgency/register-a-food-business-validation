@@ -5,7 +5,7 @@ describe("Function: validateName", () => {
     // Arrange
     const badName = [[], {}, null, undefined];
     // Act
-    badName.forEach(name => {
+    badName.forEach((name) => {
       // Assert
       const valid = validateName(name);
       expect(valid).toBe(false);
@@ -20,7 +20,7 @@ describe("Function: validateName", () => {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet semper neque, vel semper lacus commodo eu. Nunc accumsan ligula sed magna ornare blandit. Mauris at est finibus, rhoncus ligula sollicitudin, dapibus nulla. Phasellus elementum dolor"
     ];
     //Act
-    goodName.forEach(name => {
+    goodName.forEach((name) => {
       //Assert
       const valid = validateName(name);
       expect(valid).toBe(true);
@@ -31,7 +31,7 @@ describe("Function: validateName", () => {
     //Arrange
     const badNames = ["", " ", "       "];
     //Act
-    badNames.forEach(name => {
+    badNames.forEach((name) => {
       const valid = validateName(name);
       expect(valid).toBe(false);
     });
@@ -45,7 +45,7 @@ describe("Function: validateName", () => {
     ];
 
     // Act
-    badStrings.forEach(string => {
+    badStrings.forEach((string) => {
       // Assert
       const valid = validateName(string);
       expect(valid).toBe(false);

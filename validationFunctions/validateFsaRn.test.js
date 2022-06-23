@@ -6,7 +6,7 @@ describe("Function: validateFsaReferenceNumber", () => {
     const fsaRns = [[], {}, null, undefined];
 
     // Act / Assert
-    fsaRns.forEach(fsaRn => {
+    fsaRns.forEach((fsaRn) => {
       const valid = validateFsaReferenceNumber(fsaRn);
       expect(valid).toBe(false);
     });
@@ -17,7 +17,7 @@ describe("Function: validateFsaReferenceNumber", () => {
     const fsaRns = [""];
 
     // Act / Assert
-    fsaRns.forEach(fsaRn => {
+    fsaRns.forEach((fsaRn) => {
       const valid = validateFsaReferenceNumber(fsaRn);
       expect(valid).toBe(true);
     });
@@ -35,7 +35,7 @@ describe("Function: validateFsaReferenceNumber", () => {
     ];
 
     // Act / Assert
-    fsaRns.forEach(fsaRn => {
+    fsaRns.forEach((fsaRn) => {
       const valid = validateFsaReferenceNumber(fsaRn);
       expect(valid).toBe(false);
     });
@@ -50,7 +50,7 @@ describe("Function: validateFsaReferenceNumber", () => {
     ];
 
     // Act / Assert
-    fsaRns.forEach(fsaRn => {
+    fsaRns.forEach((fsaRn) => {
       const valid = validateFsaReferenceNumber(fsaRn);
       expect(valid).toBe(true);
     });

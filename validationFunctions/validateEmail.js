@@ -12,7 +12,7 @@ const { isEmail, trim } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateEmail = email => {
+const validateEmail = (email) => {
   if (typeof email === "string") {
     if (email.length <= 255) {
       const noWhiteSpaceEmail = trim(email);

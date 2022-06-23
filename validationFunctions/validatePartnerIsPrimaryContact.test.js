@@ -5,7 +5,7 @@ describe("Function: validatePartnerIsPrimaryContact", () => {
     // Arrange
     const badIsPrimaryContact = [[], {}, null, undefined, "", "true", "false"];
     // Act
-    badIsPrimaryContact.forEach(isPrimaryContact => {
+    badIsPrimaryContact.forEach((isPrimaryContact) => {
       // Assert
       const valid = validatePartnerIsPrimaryContact(isPrimaryContact);
       expect(valid).toBe(false);
@@ -16,7 +16,7 @@ describe("Function: validatePartnerIsPrimaryContact", () => {
     //Arrange
     const goodIsPrimaryContact = [true, false];
     //Act
-    goodIsPrimaryContact.forEach(isPrimaryContact => {
+    goodIsPrimaryContact.forEach((isPrimaryContact) => {
       //Assert
       const valid = validatePartnerIsPrimaryContact(isPrimaryContact);
       expect(valid).toBe(true);

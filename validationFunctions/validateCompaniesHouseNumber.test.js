@@ -6,7 +6,7 @@ describe("Function: validateCompaniesHouseNumber", () => {
     const badCHNumber = [[], {}, null, undefined];
 
     // Act
-    badCHNumber.forEach(chNumber => {
+    badCHNumber.forEach((chNumber) => {
       // Assert
       const valid = validateCompaniesHouseNumber(chNumber);
       expect(valid).toBe(false);
@@ -18,7 +18,7 @@ describe("Function: validateCompaniesHouseNumber", () => {
     const badCHNumbers = ["", " ", "       "];
 
     //Act
-    badCHNumbers.forEach(chNumber => {
+    badCHNumbers.forEach((chNumber) => {
       const valid = validateCompaniesHouseNumber(chNumber);
       expect(valid).toBe(false);
     });
@@ -28,7 +28,7 @@ describe("Function: validateCompaniesHouseNumber", () => {
     // Arrange
     const chNumbers = ["123456789", "1234567"];
 
-    chNumbers.forEach(number => {
+    chNumbers.forEach((number) => {
       // Act
       const valid = validateCompaniesHouseNumber(number);
 
@@ -53,7 +53,7 @@ describe("Function: validateCompaniesHouseNumber", () => {
     const chNumbers = ["AA123456", "AA12345R", "13746274", "AKRMKGRN"];
 
     // Act
-    chNumbers.forEach(chNumber => {
+    chNumbers.forEach((chNumber) => {
       const valid = validateCompaniesHouseNumber(chNumber);
       // Assert
       expect(valid).toBe(true);

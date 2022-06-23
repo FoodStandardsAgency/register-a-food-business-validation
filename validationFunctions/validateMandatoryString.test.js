@@ -5,7 +5,7 @@ describe("Function: validateMandatoryString", () => {
     // Arrange
     const badString = [[], {}, null, undefined];
     // Act
-    badString.forEach(string => {
+    badString.forEach((string) => {
       // Assert
       const valid = validateMandatoryString(string);
       expect(valid).toBe(false);
@@ -37,7 +37,7 @@ describe("Function: validateMandatoryString", () => {
     const nonAsciiStrings = ["§", "¥", "«® ¢"];
 
     // Act
-    nonAsciiStrings.forEach(string => {
+    nonAsciiStrings.forEach((string) => {
       // Assert
       const valid = validateMandatoryString(string);
       expect(valid).toBe(true);
@@ -53,7 +53,7 @@ describe("Function: validateMandatoryString", () => {
     ];
 
     // Act
-    goodStrings.forEach(string => {
+    goodStrings.forEach((string) => {
       // Assert
       const valid = validateMandatoryString(string);
       expect(valid).toBe(true);
@@ -67,7 +67,7 @@ describe("Function: validateMandatoryString", () => {
     ];
 
     // Act
-    badStrings.forEach(string => {
+    badStrings.forEach((string) => {
       // Assert
       const valid = validateMandatoryString(string);
       expect(valid).toBe(false);

@@ -5,7 +5,7 @@ describe("Function: validate secondary contact", () => {
     // Arrange
     const badNumber = [[], {}, null, undefined];
     // Act
-    badNumber.forEach(number => {
+    badNumber.forEach((number) => {
       // Assert
       const valid = validatePhoneNumberOptional(number);
       expect(valid).toBe(false);
@@ -25,7 +25,7 @@ describe("Function: validate secondary contact", () => {
     //Arrange
     const goodNumber = ["447462458575", "2874827482", "110248940242920"];
     //Act
-    goodNumber.forEach(number => {
+    goodNumber.forEach((number) => {
       //Assert
       const valid = validatePhoneNumberOptional(number);
       expect(valid).toBe(true);
@@ -45,7 +45,7 @@ describe("Function: validate secondary contact", () => {
     //Arrange
     const badNumbers = ["djdheiu7373", "wuyewixx@$", ".+()-9w"];
     //Act
-    badNumbers.forEach(number => {
+    badNumbers.forEach((number) => {
       //Assert
       const valid = validatePhoneNumberOptional(number);
       expect(valid).toBe(false);

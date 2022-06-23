@@ -6,7 +6,7 @@ describe("Function: validateOpeningHours", () => {
     const badHours = [[], {}, null, undefined];
 
     // Act
-    badHours.forEach(hours => {
+    badHours.forEach((hours) => {
       // Assert
       const valid = validateOpeningHours(hours);
       expect(valid).toBe(false);
@@ -18,7 +18,7 @@ describe("Function: validateOpeningHours", () => {
     const badHours = ["", " ", "       "];
 
     //Act
-    badHours.forEach(hours => {
+    badHours.forEach((hours) => {
       const valid = validateOpeningHours(hours);
       expect(valid).toBe(false);
     });

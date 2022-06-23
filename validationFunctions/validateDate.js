@@ -13,7 +13,7 @@ const { isISO8601 } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateDate = date => {
+const validateDate = (date) => {
   if (typeof date === "string") {
     const dateArray = date.split("-");
     if (dateArray[1] < 10 && dateArray[1].indexOf("0") === -1) {

@@ -6,7 +6,7 @@ describe("Function: validateCharityNumber", () => {
     const badCharityNumber = [[], {}, null, undefined];
 
     // Act
-    badCharityNumber.forEach(charityNumber => {
+    badCharityNumber.forEach((charityNumber) => {
       // Assert
       const valid = validateCharityNumber(charityNumber);
       expect(valid).toBe(false);
@@ -27,7 +27,7 @@ describe("Function: validateCharityNumber", () => {
     const badCharityNumbers = [" ", "       "];
 
     //Act
-    badCharityNumbers.forEach(charityNumber => {
+    badCharityNumbers.forEach((charityNumber) => {
       const valid = validateCharityNumber(charityNumber);
       expect(valid).toBe(false);
     });
@@ -37,7 +37,7 @@ describe("Function: validateCharityNumber", () => {
     // Arrange
     const charityNumbers = ["123456789", "12345"];
 
-    charityNumbers.forEach(charityNumber => {
+    charityNumbers.forEach((charityNumber) => {
       // Act
       const valid = validateCharityNumber(charityNumber);
 
@@ -50,7 +50,7 @@ describe("Function: validateCharityNumber", () => {
     // Arrange
     const charityNumbers = ["123@!678", "1234a!56"];
 
-    charityNumbers.forEach(charityNumber => {
+    charityNumbers.forEach((charityNumber) => {
       // Act
       const valid = validateCharityNumber(charityNumber);
 
@@ -63,7 +63,7 @@ describe("Function: validateCharityNumber", () => {
     // Arrange
     const charityNumbers = ["123--678", "--------"];
 
-    charityNumbers.forEach(charityNumber => {
+    charityNumbers.forEach((charityNumber) => {
       // Act
       const valid = validateCharityNumber(charityNumber);
 
@@ -76,7 +76,7 @@ describe("Function: validateCharityNumber", () => {
     // Arrange
     const charityNumbers = ["12345678", "12345-78", "-1234567"];
 
-    charityNumbers.forEach(charityNumber => {
+    charityNumbers.forEach((charityNumber) => {
       // Act
       const valid = validateCharityNumber(charityNumber);
 

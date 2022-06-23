@@ -11,11 +11,11 @@
  * @returns {boolean} It will return true if the argument is an array with a minimum of 2 and a maximum of 5 items, and exactly one primary contact is defined.
  */
 
-const validatePartnersHasPrimaryContact = partners => {
+const validatePartnersHasPrimaryContact = (partners) => {
   if (Array.isArray(partners)) {
     if (partners.length >= 2 && partners.length <= 5) {
       const mainPartnershipContacts = partners.filter(
-        partner => partner.partner_is_primary_contact === true
+        (partner) => partner.partner_is_primary_contact === true
       );
       if (mainPartnershipContacts.length === 1) {
         return true;

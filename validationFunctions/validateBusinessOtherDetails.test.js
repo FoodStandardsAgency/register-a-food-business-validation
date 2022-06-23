@@ -5,7 +5,7 @@ describe("Function: validateBusinessOtherDetails", () => {
     // Arrange
     const badText = [[], {}, null, undefined];
     // Act
-    badText.forEach(text => {
+    badText.forEach((text) => {
       // Assert
       const valid = validateBusinessOtherDetails(text);
       expect(valid).toBe(false);

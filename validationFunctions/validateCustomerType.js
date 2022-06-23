@@ -12,7 +12,7 @@ const { customerTypeEnum } = require("../enums/customerTypeEnum");
  *
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
-const validateCustomerType = customerType => {
+const validateCustomerType = (customerType) => {
   return customerTypeEnum[customerType] ? true : false;
 };
 

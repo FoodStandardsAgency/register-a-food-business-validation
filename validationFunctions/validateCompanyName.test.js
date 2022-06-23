@@ -6,7 +6,7 @@ describe("Function: validateCompanyName", () => {
     const badName = [[], {}, null, undefined];
 
     // Act
-    badName.forEach(name => {
+    badName.forEach((name) => {
       // Assert
       const valid = validateCompanyName(name);
       expect(valid).toBe(false);
@@ -18,7 +18,7 @@ describe("Function: validateCompanyName", () => {
     const badNames = ["", " ", "       "];
 
     //Act
-    badNames.forEach(name => {
+    badNames.forEach((name) => {
       const valid = validateCompanyName(name);
       expect(valid).toBe(false);
     });

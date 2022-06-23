@@ -962,7 +962,10 @@ const businessTypeEnum = {
   "040": {
     key: "040",
     value: { en: "Farm shop", cy: "Siop fferm" },
-    searchTerms: { en: ["retail", "farmshop"], cy: ["manwerthu", "siop fferm"] }
+    searchTerms: {
+      en: ["retail", "farmshop"],
+      cy: ["manwerthu", "siop fferm"]
+    }
   },
   "041": {
     key: "041",

@@ -12,7 +12,7 @@ const { isURL, trim, isEmpty } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateWebAddress = webAddress => {
+const validateWebAddress = (webAddress) => {
   if (typeof webAddress === "string") {
     if (isEmpty(webAddress)) {
       return true;

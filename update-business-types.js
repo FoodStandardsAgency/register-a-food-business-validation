@@ -43,7 +43,7 @@ const updateBusinessTypesEnum = async () => {
     const displayNames = {};
     if (prefLabel) {
       if (Array.isArray(prefLabel)) {
-        prefLabel.forEach(label => {
+        prefLabel.forEach((label) => {
           displayNames[label["@language"]] = label["@value"];
         });
       } else {
@@ -53,7 +53,7 @@ const updateBusinessTypesEnum = async () => {
     return displayNames;
   }
 
-  newBusinessTypesArray.forEach(businessType => {
+  newBusinessTypesArray.forEach((businessType) => {
     const displayNames = getDisplayNames(businessType["skos:prefLabel"]);
     if (businessType["skos:notation"] && displayNames.en) {
       businessTypeEnum[businessType["skos:notation"]] = {
@@ -72,9 +72,9 @@ const updateBusinessTypesEnum = async () => {
 
   const businessTypeKeys = Object.keys(businessTypeEnum);
 
-  newSearchTermDataArray.forEach(searchTermData => {
+  newSearchTermDataArray.forEach((searchTermData) => {
     const businessTypeKey = businessTypeKeys.find(
-      key =>
+      (key) =>
         searchTermData.displayName === businessTypeEnum[key].value.en ||
         searchTermData.displayName ===
           v1BusinessTypesMapping[businessTypeEnum[key].value.en]
@@ -92,7 +92,7 @@ const updateBusinessTypesEnum = async () => {
     `const businessTypeEnum=${JSON.stringify(
       businessTypeEnum
     )}; module.exports={businessTypeEnum};`,
-    err => {
+    (err) => {
       if (err) {
         return console.log(err);
       }

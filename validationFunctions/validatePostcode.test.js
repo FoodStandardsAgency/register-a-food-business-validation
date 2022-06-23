@@ -6,7 +6,7 @@ describe("Function: validatePostCode", () => {
     const badPostCodes = [[], {}, undefined, null];
 
     // Act
-    badPostCodes.forEach(postcode => {
+    badPostCodes.forEach((postcode) => {
       // Assert
       const valid = validatePostCode(postcode);
       expect(valid).toBe(false);
@@ -18,7 +18,7 @@ describe("Function: validatePostCode", () => {
     const badPostCodes = ["random string", "SW", "12", "1445sfds"];
 
     // Act
-    badPostCodes.forEach(postcode => {
+    badPostCodes.forEach((postcode) => {
       // Assert
       const valid = validatePostCode(postcode);
       expect(valid).toBe(false);
@@ -30,7 +30,7 @@ describe("Function: validatePostCode", () => {
     const goodPostCodes = ["SW12", "SE1 9PZ", "TW1"];
 
     // Act
-    goodPostCodes.forEach(postcode => {
+    goodPostCodes.forEach((postcode) => {
       // Assert
       const valid = validatePostCode(postcode);
       expect(valid).toBe(true);
@@ -42,7 +42,7 @@ describe("Function: validatePostCode", () => {
     const goodPostCodes = ["SW12 ", " SE1 9PZ", "TW1   "];
 
     // Act
-    goodPostCodes.forEach(postcode => {
+    goodPostCodes.forEach((postcode) => {
       // Assert
       const valid = validatePostCode(postcode);
       expect(valid).toBe(true);

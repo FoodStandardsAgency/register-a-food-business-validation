@@ -6,7 +6,7 @@ describe("Function: validateImportExportActivities", () => {
     const allowedImportExportActivities = ["IMPORT", "EXPORT", "NONE", "BOTH"];
 
     // Act
-    allowedImportExportActivities.forEach(importExportActivities => {
+    allowedImportExportActivities.forEach((importExportActivities) => {
       // Assert
       const valid = validateImportExportActivities(importExportActivities);
       expect(valid).toBe(true);
@@ -22,12 +22,14 @@ describe("Function: validateImportExportActivities", () => {
     ];
 
     // Act
-    notAllowedImportExportActivities.forEach(notImportExportActivitiesType => {
-      // Assert
-      const valid = validateImportExportActivities(
-        notImportExportActivitiesType
-      );
-      expect(valid).toBe(false);
-    });
+    notAllowedImportExportActivities.forEach(
+      (notImportExportActivitiesType) => {
+        // Assert
+        const valid = validateImportExportActivities(
+          notImportExportActivitiesType
+        );
+        expect(valid).toBe(false);
+      }
+    );
   });
 });

@@ -4,7 +4,7 @@ describe("Function: validate establishment type", () => {
     // Arrange
     const badValue = ["INVALIDVALUE", {}, null, undefined];
     // Act
-    badValue.forEach(key => {
+    badValue.forEach((key) => {
       // Assert
       const valid = validateEstablishmentType(key);
       expect(valid).toBe(false);
@@ -15,7 +15,7 @@ describe("Function: validate establishment type", () => {
     //Arrange
     const goodValue = ["COMMERCIAL", "MOBILE", "DOMESTIC"];
     //Act
-    goodValue.forEach(key => {
+    goodValue.forEach((key) => {
       //Assert
       const valid = validateEstablishmentType(key);
       expect(valid).toBe(true);
