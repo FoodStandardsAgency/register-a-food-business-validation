@@ -14,7 +14,7 @@ const validateDate = require("./validateDate");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validatePastDate = date => {
+const validatePastDate = (date) => {
   if (validateDate(date)) {
     return (
       moment(date).isBefore(moment()) || moment().isSame(moment(date), "day")

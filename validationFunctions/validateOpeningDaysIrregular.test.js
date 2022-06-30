@@ -5,7 +5,7 @@ describe("Function: validateOpeningDaysIrregular", () => {
     // Arrange
     const badText = [[], {}, null, undefined];
     // Act
-    badText.forEach(text => {
+    badText.forEach((text) => {
       // Assert
       const valid = validateOpeningDaysIrregular(text);
       expect(valid).toBe(false);
@@ -16,7 +16,7 @@ describe("Function: validateOpeningDaysIrregular", () => {
     // Arrange
     const badText = ["", "    "];
     // Act
-    badText.forEach(text => {
+    badText.forEach((text) => {
       // Assert
       const valid = validateOpeningDaysIrregular(text);
       expect(valid).toBe(false);

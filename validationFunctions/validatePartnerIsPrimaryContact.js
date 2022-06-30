@@ -11,7 +11,7 @@
  * @returns {boolean} It will return true if the supplied argument is a boolean
  */
 
-const validatePartnerIsPrimaryContact = partner_is_primary_contact => {
+const validatePartnerIsPrimaryContact = (partner_is_primary_contact) => {
   if (
     partner_is_primary_contact === true ||
     partner_is_primary_contact === false

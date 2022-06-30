@@ -3,9 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.23.0 - 30 June 2022 (released)
+
+ - Updated NPM packages to latest versions
+
 ## v1.22.5 - 23 March 2022 (released)
 
- - Business type tranlsation correction
+ - Business type translation correction
 
 ## v1.22.4 - 01 March 2022 (released)
 

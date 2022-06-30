@@ -12,7 +12,7 @@ const { isPostalCode, trim } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validatePostCode = postcode => {
+const validatePostCode = (postcode) => {
   if (typeof postcode === "string") {
     const noWhiteSpacePostcode = trim(postcode);
     return isPostalCode(noWhiteSpacePostcode, "GB") ? true : false;

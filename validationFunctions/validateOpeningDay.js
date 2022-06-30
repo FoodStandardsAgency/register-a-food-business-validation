@@ -11,7 +11,7 @@
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateOpeningDay = day => {
+const validateOpeningDay = (day) => {
   if (day === true || day === false) {
     return true;
   }

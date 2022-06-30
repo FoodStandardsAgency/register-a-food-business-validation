@@ -6,7 +6,7 @@ describe("Function: validateEstablishmentTradingName", () => {
     const badTradingName = [[], {}, undefined, null];
 
     // Act
-    badTradingName.forEach(tradingName => {
+    badTradingName.forEach((tradingName) => {
       // Assert
       const valid = validateEstablishmentTradingName(tradingName);
       expect(valid).toBe(false);
@@ -18,7 +18,7 @@ describe("Function: validateEstablishmentTradingName", () => {
     const badTradingNames = ["", " ", "       "];
 
     // Act
-    badTradingNames.forEach(tradingName => {
+    badTradingNames.forEach((tradingName) => {
       // Assert
       const valid = validateEstablishmentTradingName(tradingName);
       expect(valid).toBe(false);
@@ -32,7 +32,7 @@ describe("Function: validateEstablishmentTradingName", () => {
     ];
 
     // Act
-    badStrings.forEach(string => {
+    badStrings.forEach((string) => {
       // Assert
       const valid = validateEstablishmentTradingName(string);
       expect(valid).toBe(false);
@@ -48,7 +48,7 @@ describe("Function: validateEstablishmentTradingName", () => {
     ];
 
     // Act
-    goodTradingNames.forEach(tradingName => {
+    goodTradingNames.forEach((tradingName) => {
       // Assert
       const valid = validateEstablishmentTradingName(tradingName);
       expect(valid).toBe(true);

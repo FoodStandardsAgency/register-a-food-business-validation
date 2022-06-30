@@ -4,7 +4,7 @@ describe("Function: validate primary contact", () => {
     // Arrange
     const badNumber = [[], {}, null, undefined];
     // Act
-    badNumber.forEach(number => {
+    badNumber.forEach((number) => {
       // Assert
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(false);
@@ -24,7 +24,7 @@ describe("Function: validate primary contact", () => {
     //Arrange
     const goodNumber = ["44746", "2874827482", "11024894024292073849"];
     //Act
-    goodNumber.forEach(number => {
+    goodNumber.forEach((number) => {
       //Assert
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(true);
@@ -35,7 +35,7 @@ describe("Function: validate primary contact", () => {
     //Arrange
     const badNumbers = ["", " ", "       "];
     //Act
-    badNumbers.forEach(number => {
+    badNumbers.forEach((number) => {
       //Assert
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(false);
@@ -45,7 +45,7 @@ describe("Function: validate primary contact", () => {
   it("Should return false if phone number isnt between 5-20", () => {
     //Arrange
     const badNumbers = ["123", "1234567891012345678901"];
-    badNumbers.forEach(number => {
+    badNumbers.forEach((number) => {
       //Assert
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(false);
@@ -56,7 +56,7 @@ describe("Function: validate primary contact", () => {
     //Arrange
     const badNumbers = ["djdheiu7373", "wuyewixx@$", ".+()-9w"];
     //Act
-    badNumbers.forEach(number => {
+    badNumbers.forEach((number) => {
       //Assert
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(false);

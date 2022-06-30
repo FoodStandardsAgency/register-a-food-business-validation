@@ -28,8 +28,7 @@ const operatorTypeEnum = {
     key: "CHARITY",
     value: {
       en: "A charity (registered by a representative)",
-      cy:
-        "Elusen, sefydliad neu ymddiriedolaeth sy'n berchen ar y busnes bwyd neu sy'n ei weithredu"
+      cy: "Elusen, sefydliad neu ymddiriedolaeth sy'n berchen ar y busnes bwyd neu sy'n ei weithredu"
     }
   }
 };

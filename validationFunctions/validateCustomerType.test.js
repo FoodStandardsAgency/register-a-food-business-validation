@@ -6,7 +6,7 @@ describe("Function: validateCustomerType", () => {
     const allowedCustomerTypes = ["OTHER_BUSINESSES", "END_CONSUMER", "BOTH"];
 
     // Act
-    allowedCustomerTypes.forEach(customerType => {
+    allowedCustomerTypes.forEach((customerType) => {
       // Assert
       const valid = validateCustomerType(customerType);
       expect(valid).toBe(true);
@@ -18,7 +18,7 @@ describe("Function: validateCustomerType", () => {
     const notAllowedCustomerTypes = ["", undefined, "438574hfeuhgjhgk"];
 
     // Act
-    notAllowedCustomerTypes.forEach(notCustomerType => {
+    notAllowedCustomerTypes.forEach((notCustomerType) => {
       // Assert
       const valid = validateCustomerType(notCustomerType);
       expect(valid).toBe(false);

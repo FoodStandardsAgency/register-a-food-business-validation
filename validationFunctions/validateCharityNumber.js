@@ -13,7 +13,7 @@ const { isEmpty, trim, isAlphanumeric, blacklist } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateCharityNumber = charityNumber => {
+const validateCharityNumber = (charityNumber) => {
   if (typeof charityNumber === "string") {
     if (charityNumber === "") {
       return true;

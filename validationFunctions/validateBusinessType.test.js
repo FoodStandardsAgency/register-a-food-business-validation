@@ -6,7 +6,7 @@ describe("Function: validateBusinessType", () => {
     const badType = [[], {}, null, undefined];
 
     // Act
-    badType.forEach(type => {
+    badType.forEach((type) => {
       // Assert
       const valid = validateBusinessType(type);
       expect(valid).toBe(false);
@@ -18,7 +18,7 @@ describe("Function: validateBusinessType", () => {
     const badTypes = ["", " ", "       "];
 
     //Act
-    badTypes.forEach(type => {
+    badTypes.forEach((type) => {
       const valid = validateBusinessType(type);
       expect(valid).toBe(false);
     });
@@ -33,7 +33,7 @@ describe("Function: validateBusinessType", () => {
     ];
 
     //Act
-    badTypes.forEach(type => {
+    badTypes.forEach((type) => {
       const valid = validateBusinessType(type);
       expect(valid).toBe(false);
     });
@@ -44,7 +44,7 @@ describe("Function: validateBusinessType", () => {
     const goodTypes = ["001", "051 ", " 003"];
 
     //Act
-    goodTypes.forEach(type => {
+    goodTypes.forEach((type) => {
       const valid = validateBusinessType(type);
       expect(valid).toBe(true);
     });

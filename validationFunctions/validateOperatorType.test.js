@@ -4,7 +4,7 @@ describe("Function: validate operator type", () => {
     // Arrange
     const badValue = ["INVALIDVALUE", {}, null, undefined];
     // Act
-    badValue.forEach(key => {
+    badValue.forEach((key) => {
       // Assert
       const valid = validateOperatorType(key);
       expect(valid).toBe(false);
@@ -21,7 +21,7 @@ describe("Function: validate operator type", () => {
       "CHARITY"
     ];
     //Act
-    goodValue.forEach(key => {
+    goodValue.forEach((key) => {
       //Assert
       const valid = validateOperatorType(key);
       expect(valid).toBe(true);

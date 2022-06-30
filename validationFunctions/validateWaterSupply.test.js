@@ -6,7 +6,7 @@ describe("Function: validateWaterSupply", () => {
     const allowedWaterSupply = ["PRIVATE", "PUBLIC", "BOTH"];
 
     // Act
-    allowedWaterSupply.forEach(waterSupply => {
+    allowedWaterSupply.forEach((waterSupply) => {
       // Assert
       const valid = validateWaterSupply(waterSupply);
       expect(valid).toBe(true);
@@ -18,7 +18,7 @@ describe("Function: validateWaterSupply", () => {
     const notAllowedWaterSupply = ["", undefined, "438574hfeuhgjhgk"];
 
     // Act
-    notAllowedWaterSupply.forEach(waterSupply => {
+    notAllowedWaterSupply.forEach((waterSupply) => {
       // Assert
       const valid = validateWaterSupply(waterSupply);
       expect(valid).toBe(false);

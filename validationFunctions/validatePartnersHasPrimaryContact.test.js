@@ -5,7 +5,7 @@ describe("Function: validatePartnersHasPrimaryContact", () => {
     // Arrange
     const badPartners = ["", {}, null, undefined];
     // Act
-    badPartners.forEach(partner => {
+    badPartners.forEach((partner) => {
       // Assert
       const valid = validatePartnersHasPrimaryContact(partner);
       expect(valid).toBe(false);

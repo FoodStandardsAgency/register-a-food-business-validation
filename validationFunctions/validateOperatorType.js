@@ -13,7 +13,7 @@ const { operatorTypeEnum } = require("../enums/operatorTypeEnum");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-const validateOperatorType = operatorType => {
+const validateOperatorType = (operatorType) => {
   return operatorTypeEnum[operatorType] ? true : false;
 };
 

@@ -9,7 +9,7 @@ describe("Function: validateWebAddress", () => {
       "iamabadwebAddress1"
     ];
     // Act
-    badWebAddress.forEach(webAddress => {
+    badWebAddress.forEach((webAddress) => {
       // Assert
       const valid = validateWebAddress(webAddress);
       expect(valid).toBe(false);
@@ -20,29 +20,29 @@ describe("Function: validateWebAddress", () => {
     // Arrange
     const emptyField = "";
     // Act
-  
-      // Assert
-      const valid = validateWebAddress(emptyField);
-      expect(valid).toBe(true);
+
+    // Assert
+    const valid = validateWebAddress(emptyField);
+    expect(valid).toBe(true);
   });
 
   it("Should return false when input is blank string", () => {
     // Arrange
     const badWebAddress = "  ";
     // Act
-  
-      // Assert
-      const valid = validateWebAddress(badWebAddress);
-      expect(valid).toBe(false);
+
+    // Assert
+    const valid = validateWebAddress(badWebAddress);
+    expect(valid).toBe(false);
   });
-  
+
   it("Should return false if greater than 254 characters", () => {
     //Arrange
     const badWebAddress = [
       "LoremipsumdolorsitametconsectetueradipiscingelitAeneancommodoligulaegetdolorAeneanmassa.CumsociisnatoquepenatibusetmagnisdisparturientmontesnasceturridiculusmusDonecquamfelisultriciesnecpellentesqueeupretiumquis@testyMctestwebAddressaddressthatislongerthan254characters.com"
     ];
     //Act
-    badWebAddress.forEach(webAddress => {
+    badWebAddress.forEach((webAddress) => {
       //Assert
       const valid = validateWebAddress(webAddress);
       expect(valid).toBe(false);
@@ -57,7 +57,7 @@ describe("Function: validateWebAddress", () => {
       "django123.com"
     ];
     // Act
-    goodwebAddresss.forEach(webAddress => {
+    goodwebAddresss.forEach((webAddress) => {
       // Assert
       const valid = validateWebAddress(webAddress);
       expect(valid).toBe(true);
@@ -72,7 +72,7 @@ describe("Function: validateWebAddress", () => {
       "django123.com  "
     ];
     // Act
-    goodwebAddresss.forEach(webAddress => {
+    goodwebAddresss.forEach((webAddress) => {
       // Assert
       const valid = validateWebAddress(webAddress);
       expect(valid).toBe(true);

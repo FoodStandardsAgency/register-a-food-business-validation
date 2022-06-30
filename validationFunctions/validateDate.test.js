@@ -6,7 +6,7 @@ describe("Function: validateDate", () => {
     const badInput = [[], {}, null, undefined];
 
     // Act
-    badInput.forEach(input => {
+    badInput.forEach((input) => {
       const result = validateDate(input);
 
       // Assert
@@ -19,7 +19,7 @@ describe("Function: validateDate", () => {
     const dates = ["2018-06-17", "2018-1-1"];
 
     // Act
-    dates.forEach(date => {
+    dates.forEach((date) => {
       const result = validateDate(date);
 
       // Assert

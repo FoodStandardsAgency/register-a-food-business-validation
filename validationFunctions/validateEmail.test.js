@@ -6,7 +6,7 @@ describe("Function: validateEmail", () => {
     const badEmails = [[], {}, undefined, null];
 
     // Act
-    badEmails.forEach(email => {
+    badEmails.forEach((email) => {
       // Assert
       const valid = validateEmail(email);
       expect(valid).toBe(false);
@@ -18,7 +18,7 @@ describe("Function: validateEmail", () => {
     const badEmails = ["", " ", "       "];
 
     // Act
-    badEmails.forEach(email => {
+    badEmails.forEach((email) => {
       // Assert
       const valid = validateEmail(email);
       expect(valid).toBe(false);
@@ -29,7 +29,7 @@ describe("Function: validateEmail", () => {
     // Arrange
     const badEmails = ["bademail.com", "bademail@bademail", "iama bademail1"];
     // Act
-    badEmails.forEach(email => {
+    badEmails.forEach((email) => {
       // Assert
       const valid = validateEmail(email);
       expect(valid).toBe(false);
@@ -42,7 +42,7 @@ describe("Function: validateEmail", () => {
       "LoremipsumdolorsitametconsectetueradipiscingelitAeneancommodoligulaegetdolorAeneanmassa.CumsociisnatoquepenatibusetmagnisdisparturientmontesnasceturridiculusmusDonecquamfelisultriciesnecpellentesqueeupretiumquis@testyMctestemailaddressthatislongerthan254characters.com"
     ];
     //Act
-    badEmails.forEach(email => {
+    badEmails.forEach((email) => {
       //Assert
       const valid = validateEmail(email);
       expect(valid).toBe(false);
@@ -57,7 +57,7 @@ describe("Function: validateEmail", () => {
       "django123@hotmail.com"
     ];
     // Act
-    goodEmails.forEach(email => {
+    goodEmails.forEach((email) => {
       // Assert
       const valid = validateEmail(email);
       expect(valid).toBe(true);
@@ -72,7 +72,7 @@ describe("Function: validateEmail", () => {
       "django123@hotmail.com  "
     ];
     // Act
-    goodEmails.forEach(email => {
+    goodEmails.forEach((email) => {
       // Assert
       const valid = validateEmail(email);
       expect(valid).toBe(true);
