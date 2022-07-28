@@ -21,7 +21,7 @@ const updateBusinessTypesEnum = async () => {
     "https://data.food.gov.uk/codes/business/rafb/establishment-type?_format=jsonld"
   );
 
-  const businessTypesJSON = await businessTypesData.data;
+  const businessTypesJSON = businessTypesData.data;
 
   const newBusinessTypesArray = Object.values(
     JSON.parse(JSON.stringify(businessTypesJSON["@graph"]))
@@ -31,7 +31,7 @@ const updateBusinessTypesEnum = async () => {
     "https://raw.githubusercontent.com/FoodStandardsAgency/Future-Risk-Engine-Development/master/business-types.json"
   );
 
-  const searchTermJSON = await searchTermData.data;
+  const searchTermJSON = searchTermData.data;
 
   const newSearchTermDataArray = Object.values(
     JSON.parse(JSON.stringify(searchTermJSON))
