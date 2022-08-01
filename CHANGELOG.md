@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.24.0 - 1 August 2022 (released)
+
+ - Migrated node-fetch to axios
+
 ## v1.23.0 - 30 June 2022 (released)
 
  - Updated NPM packages to latest versions

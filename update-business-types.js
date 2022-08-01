@@ -1,5 +1,5 @@
 const fs = require("fs");
-const fetch = require("node-fetch");
+const axios = require("axios").default;
 
 const { businessTypeEnum_cy } = require("./enums/businessTypes-cy-temp.js");
 
@@ -17,21 +17,21 @@ const v1BusinessTypesMapping = {
 };
 
 const updateBusinessTypesEnum = async () => {
-  const businessTypesData = await fetch(
+  const businessTypesData = await axios(
     "https://data.food.gov.uk/codes/business/rafb/establishment-type?_format=jsonld"
   );
 
-  const businessTypesJSON = await businessTypesData.json();
+  const businessTypesJSON = businessTypesData.data;
 
   const newBusinessTypesArray = Object.values(
     JSON.parse(JSON.stringify(businessTypesJSON["@graph"]))
   );
 
-  const searchTermData = await fetch(
+  const searchTermData = await axios(
     "https://raw.githubusercontent.com/FoodStandardsAgency/Future-Risk-Engine-Development/master/business-types.json"
   );
 
-  const searchTermJSON = await searchTermData.json();
+  const searchTermJSON = searchTermData.data;
 
   const newSearchTermDataArray = Object.values(
     JSON.parse(JSON.stringify(searchTermJSON))
