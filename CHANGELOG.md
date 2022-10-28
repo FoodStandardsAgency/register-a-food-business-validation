@@ -3,41 +3,45 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.25.0 - 28 October 2022 (released)
+
+- Updated NPM packages to latest versions
+
 ## v1.24.0 - 1 August 2022 (released)
 
- - Migrated node-fetch to axios
+- Migrated node-fetch to axios
 
 ## v1.23.0 - 30 June 2022 (released)
 
- - Updated NPM packages to latest versions
+- Updated NPM packages to latest versions
 
 ## v1.22.5 - 23 March 2022 (released)
 
- - Business type translation correction
+- Business type translation correction
 
 ## v1.22.4 - 01 March 2022 (released)
 
- - Web address returns true if string is ev
+- Web address returns true if string is ev
 
 ## v1.22.3 - 01 March 2022 (released)
 
- - Web address returns true if string is empty fix
+- Web address returns true if string is empty fix
 
 ## v1.22.2 - 17 March 2021 (released)
 
- - Web address defaults to true if field not filled
+- Web address defaults to true if field not filled
 
 ## v1.22.1 - 17 March 2021 (released)
 
- - Exported web address validation function
+- Exported web address validation function
 
 ## v1.22.0 - 17 March 2021 (released)
 
- - Added validation function for web address
+- Added validation function for web address
 
 ## v1.21.6 - 19 January 2021 (released)
 
- - Updated welsh search terms
+- Updated welsh search terms
 
 ## v1.21.3 - 18 January 2021 (released)
 
