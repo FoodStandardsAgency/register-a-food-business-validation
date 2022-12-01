@@ -36,6 +36,26 @@ describe("Function: validateEmail", () => {
     });
   });
 
+  it("Should return false if string is not a valid e-mail (Invalid Characters)", () => {
+    // Arrange
+    const badEmails = [
+      "badmai$l@email.com",
+      "Owner.me..7080@abcd.com",
+      "Inownzsite()&@abcd.com",
+      "Ourwebsiteismne.azbyz.com",
+      "badémail@bad.com",
+      "yourminewebsite@.com.you",
+      "@youmenandwe.we.ne",
+      "Younourmetd345@abcd.b"
+    ];
+    // Act
+    badEmails.forEach((email) => {
+      // Assert
+      const valid = validateEmail(email);
+      expect(valid).toBe(false);
+    });
+  });
+
   it("Should return false if greater than 254 characters", () => {
     //Arrange
     const badEmails = [
@@ -67,7 +87,7 @@ describe("Function: validateEmail", () => {
   it("Should return true if there is an empty space before or after the e-mail", () => {
     // Arrange
     const goodEmails = [
-      "anishasawesome@avacado.com ",
+      "                     anishasawesome@avacado.com                               ",
       " joejolly1@gmail.co.uk",
       "django123@hotmail.com  "
     ];
