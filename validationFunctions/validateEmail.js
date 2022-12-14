@@ -12,15 +12,17 @@ const { isEmail, trim } = require("validator");
  * @returns {boolean} It will return true if the string is valid and false if it is not valid
  */
 
-var validRegex = /^\s*\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})\s*$/;
+var validRegex =
+  /^\w+([a-zA-Z-+.'!#$%&'*+/=?`{|}~^-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})\s*$/;
 
 const validateEmail = (email) => {
   if (typeof email === "string") {
+    if (email.length <= 255) {
+      const noWhiteSpaceEmail = trim(email);
+      return isEmail(noWhiteSpaceEmail);
+    }
+
     if (email.match(validRegex)) {
-      if (email.length <= 255) {
-        const noWhiteSpaceEmail = trim(email);
-        return isEmail(noWhiteSpaceEmail);
-      }
       return false;
     }
   }
