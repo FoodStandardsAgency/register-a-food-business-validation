@@ -39,14 +39,16 @@ describe("Function: validateEmail", () => {
   it("Should return false if string is not a valid e-mail (Invalid Characters)", () => {
     // Arrange
     const badEmails = [
-      "badmai$l@email.com",
-      "Owner.me..7080@abcd.com",
-      "Inownzsite()&@abcd.com",
-      "Ourwebsiteismne.azbyz.com",
-      "badémail@bad.com",
+      "@domainsample.com",
+      "johndoedomainsample.com",
+      "john.doe43@domainsample",
       "yourminewebsite@.com.you",
       "@youmenandwe.we.ne",
-      "Younourmetd345@abcd.b"
+      "Younourmetd345@abcd.b",
+      "badémail@bad.com",
+      "singleaccentù@gmail.co.uk",
+      'a"b(c)d,e:f;g<h>i[jk]l@example.com',
+      "i_like_underscore@but_its_not_allowed_in_this_part.example.com"
     ];
     // Act
     badEmails.forEach((email) => {
@@ -74,7 +76,10 @@ describe("Function: validateEmail", () => {
     const goodEmails = [
       "anishasawesome@avacado.com",
       "joejolly1@gmail.co.uk",
-      "django123@hotmail.com"
+      "django123@hotmail.com",
+      "specialchar!@email.com",
+      "specialchar#@email.com",
+      "badmai$l@email.com"
     ];
     // Act
     goodEmails.forEach((email) => {
