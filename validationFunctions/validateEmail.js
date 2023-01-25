@@ -18,6 +18,7 @@ const validateEmail = (email) => {
       const noWhiteSpaceEmail = trim(email);
       return isEmail(noWhiteSpaceEmail, { allow_utf8_local_part: false });
     }
+    return false;
   }
   return false;
 };
