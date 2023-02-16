@@ -16,7 +16,7 @@ const validateEmail = (email) => {
   if (typeof email === "string") {
     if (email.length <= 255) {
       const noWhiteSpaceEmail = trim(email);
-      return isEmail(noWhiteSpaceEmail);
+      return isEmail(noWhiteSpaceEmail, { allow_utf8_local_part: false });
     }
     return false;
   }
