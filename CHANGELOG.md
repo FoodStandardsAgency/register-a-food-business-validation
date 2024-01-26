@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.27.0 - 26 January 2024 (released)
+
+- Updated NPM packages to latest versions
+
 ## v1.26.0 - 2 February 2023 (released)
 
 - Updated email validation to prevent invalid characters
