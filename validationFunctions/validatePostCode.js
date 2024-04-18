@@ -14,7 +14,7 @@ const { isPostalCode, trim } = require("validator");
 
 const validatePostCode = (postcode) => {
   if (typeof postcode === "string") {
-    const noWhiteSpacePostcode = postcode.trim();
+    const noWhiteSpacePostcode = postcode.replace(/\s+/g, "");
     if (noWhiteSpacePostcode.length >= 5 && noWhiteSpacePostcode.length <= 8) {
       return isPostalCode(noWhiteSpacePostcode, "GB") ? true : false;
     }

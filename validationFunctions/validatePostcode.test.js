@@ -27,7 +27,7 @@ describe("Function: validatePostCode", () => {
 
   it("should return false if string is too long or too short", () => {
     // Arrange
-    const badPostCodes = ["SW12AAAA", "SE1", "TW1 1AAAAA"];
+    const badPostCodes = ["SW12AAAA", "SE1", "TW1 1AAAAA", "BA1 6"];
 
     // Act
     badPostCodes.forEach((postcode) => {
@@ -51,7 +51,7 @@ describe("Function: validatePostCode", () => {
 
   it("should return true if string has space before or after postcode", () => {
     // Arrange
-    const goodPostCodes = ["SW12 9PZ", " SE1 9PZ", "TW1 9PZ  "];
+    const goodPostCodes = ["SW12 9PZ", " SE1   9PZ", "TW1 9PZ  ", "C1 1AA"];
 
     // Act
     goodPostCodes.forEach((postcode) => {
