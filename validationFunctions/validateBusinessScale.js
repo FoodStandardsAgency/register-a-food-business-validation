@@ -11,33 +11,31 @@ const { businessScaleEnum } = require("../enums/businessScaleEnum");
  * - 'NONE' and 'DONT_KNOW' can only be selected exclusively.
  * An empty array will return false as the field is mandatory.
  *
- * @param {Array<string>} businessScale The array of strings representing the selected business scale activities
+ * @param {Array<string>} businessScales The array of strings representing the selected business scale activities
  *
  * @returns {boolean} It will return true if the input is valid and false if it is not valid
  */
-const validateBusinessScale = (businessScale) => {
-  if (!Array.isArray(businessScale) || businessScale.length === 0) {
+const validateBusinessScale = (businessScales) => {
+  if (!Array.isArray(businessScales) || businessScales.length === 0) {
     return false;
   }
 
   // Check if 'NONE' or 'DONT_KNOW' are selected
-  const hasNone = businessScale.includes(businessScaleEnum.NONE.key);
-  const hasDontKnow = businessScale.includes(businessScaleEnum.DONT_KNOW.key);
+  const hasNone = businessScales.includes(businessScaleEnum.NONE.key);
+  const hasDontKnow = businessScales.includes(businessScaleEnum.DONT_KNOW.key);
 
   // If 'NONE' or 'DONT_KNOW' are selected, they must be the only selection
-  if ((hasNone || hasDontKnow) && businessScale.length > 1) {
+  if ((hasNone || hasDontKnow) && businessScales.length > 1) {
     return false;
   }
 
   // Validate that each selected value is part of the businessScaleEnum
-  for (let activity of businessScale) {
-    if (!businessScaleEnum[activity]) {
-      console.log("val1" + activity);
+  for (let businessScale of businessScales) {
+    if (!businessScaleEnum[businessScale]) {
       return false;
     }
   }
 
-  console.log("val1 " + " val2");
   return true;
 };
 

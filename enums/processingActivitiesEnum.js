@@ -29,7 +29,7 @@ const processingActivitiesEnum = {
   },
   NONE: {
     key: "NONE",
-    value: { en: "None" }
+    value: { en: "None of these" }
   },
   DONT_KNOW: {
     key: "DONT_KNOW",

@@ -6,7 +6,7 @@
 const { foodTypeEnum } = require("../enums/foodTypeEnum");
 
 /**
- * Runs custom validation on the business scale activities. The function will return true if:
+ * Runs custom validation on the food type activities. The function will return true if:
  * - The input contains any combination of the allowed values except for 'NONE' and 'DONT_KNOW' being selected together with other values.
  * - 'NONE' and 'DONT_KNOW' can only be selected exclusively.
  * An empty array will return false as the field is mandatory.

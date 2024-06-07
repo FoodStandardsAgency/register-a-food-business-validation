@@ -28,12 +28,12 @@ const businessScaleEnum = {
   HEALTHCARE: {
     key: "HEALTHCARE",
     value: {
-      en: "To residents in a healthcare setting(for example in a hospital, nursing home or similar)"
+      en: "To residents in a healthcare setting (for example in a hospital, nursing home or similar)"
     }
   },
   NONE: {
     key: "NONE",
-    value: { en: "None" }
+    value: { en: "None of these" }
   },
   DONT_KNOW: {
     key: "DONT_KNOW",

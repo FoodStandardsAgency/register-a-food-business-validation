@@ -8,12 +8,12 @@ const {
 } = require("../enums/processingActivitiesEnum");
 
 /**
- * Runs custom validation on the business scale activities. The function will return true if:
+ * Runs custom validation on the processing activity. The function will return true if:
  * - The input contains any combination of the allowed values except for 'NONE' and 'DONT_KNOW' being selected together with other values.
  * - 'NONE' and 'DONT_KNOW' can only be selected exclusively.
  * An empty array will return false as the field is mandatory.
  *
- * @param {Array<string>} processingActivities The array of strings representing the selected food type activities
+ * @param {Array<string>} processingActivities The array of strings representing the selected activities
  *
  * @returns {boolean} It will return true if the input is valid and false if it is not valid
  */
@@ -38,9 +38,9 @@ const validateProcessingActivities = (processingActivities) => {
     return false;
   }
 
-  // Validate that each selected value is part of the foodTypeEnum
-  for (let activity of processingActivities) {
-    if (!processingActivitiesEnum[activity]) {
+  // Validate that each selected value is part of the proceessingActivitiesEnum
+  for (let processingActivity of processingActivities) {
+    if (!processingActivitiesEnum[processingActivity]) {
       return false;
     }
   }
