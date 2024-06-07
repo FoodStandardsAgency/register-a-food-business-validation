@@ -1,5 +1,5 @@
 const foodTypeEnum = {
-  RAW_MEAT: {
+  RAW_MEAT_FISH_SHELLFISH: {
     key: "RAW_MEAT_FISH_SHELLFISH",
     value: {
       en: "Raw unwrapped meat, fish and shellfish"
