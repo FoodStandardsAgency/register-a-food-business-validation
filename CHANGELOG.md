@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.29.0 - 07 June 2024 (released)
+
+- added validation for Business Scale, Food Types and Processing Activities
+
+## v1.28.0 - 30 April 2024 (released)
+
+- Updated the postcode validation to mandate minimum length
+
 ## v1.27.0 - 26 January 2024 (released)
 
 - Updated NPM packages to latest versions
