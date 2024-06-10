@@ -17,6 +17,9 @@ const validateDate = require("./validationFunctions/validateDate");
 const validatePastDate = require("./validationFunctions/validatePastDate");
 const validateFutureDate = require("./validationFunctions/validateFutureDate");
 const validateBusinessType = require("./validationFunctions/validateBusinessType");
+const validateBusinessScale = require("./validationFunctions/validateBusinessScale");
+const validateFoodType = require("./validationFunctions/validateFoodType");
+const validateProcessingActivities = require("./validationFunctions/validateProcessingActivities");
 const validateImportExportActivities = require("./validationFunctions/validateImportExportActivities");
 const validateBusinessOtherDetails = require("./validationFunctions/validateBusinessOtherDetails");
 const validateOpeningDaysIrregular = require("./validationFunctions/validateOpeningDaysIrregular");
@@ -31,24 +34,12 @@ const validateOpeningHours = require("./validationFunctions/validateOpeningHours
 const validateMandatoryString = require("./validationFunctions/validateMandatoryString");
 const validateFsaReferenceNumber = require("./validationFunctions/validateFsaRn");
 const validateWebAddress = require("./validationFunctions/validateWebAddress");
-const {
-  businessTypeEnum,
-} = require("./enums/businessTypeEnum.js");
-const {
-  operatorTypeEnum,
-} = require("./enums/operatorTypeEnum.js");
-const {
-  establishmentTypeEnum,
-} = require("./enums/establishmentTypeEnum.js");
-const {
-  customerTypeEnum,
-} = require("./enums/customerTypeEnum.js");
-const {
-  importExportEnum,
-} = require("./enums/importExportEnum.js");
-const {
-  waterSupplyEnum,
-} = require("./enums/waterSupplyEnum.js");
+const { businessTypeEnum } = require("./enums/businessTypeEnum.js");
+const { operatorTypeEnum } = require("./enums/operatorTypeEnum.js");
+const { establishmentTypeEnum } = require("./enums/establishmentTypeEnum.js");
+const { customerTypeEnum } = require("./enums/customerTypeEnum.js");
+const { importExportEnum } = require("./enums/importExportEnum.js");
+const { waterSupplyEnum } = require("./enums/waterSupplyEnum.js");
 
 module.exports = {
   validateDeclaration,
@@ -71,6 +62,9 @@ module.exports = {
   validateFutureDate,
   validateImportExportActivities,
   validateBusinessType,
+  validateBusinessScale,
+  validateFoodType,
+  validateProcessingActivities,
   validateBusinessOtherDetails,
   validateOpeningDaysIrregular,
   validateOpeningDay,
