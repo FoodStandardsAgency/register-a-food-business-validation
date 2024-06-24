@@ -1,6 +1,6 @@
 # Exporting a new validation function
 
-To export a new validation function you need to export the module from the file it was written in and then export it from the index page. Exporting it from the index page means they can all be imported together when required rather than individually.
+To export a new validation function you need to export the module from the file it was written in and then export it from the index page. Exporting it from the index page means they can all be imported together when required rather than individually. This also applies to Enums, anything you intend to use elsewhere must be exported
 
 ## Steps:
 

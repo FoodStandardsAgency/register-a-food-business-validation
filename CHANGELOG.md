@@ -3,7 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## v1.29.0 - 07 June 2024 (released)
+## v1.29.2 - 21 June 2024 (released)
+
+- exporting enums for Business Scale, Food Types and Processing Activities
+
+## v1.29.1 - 07 June 2024 (released)
 
 - added validation for Business Scale, Food Types and Processing Activities
 
