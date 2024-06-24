@@ -40,6 +40,11 @@ const { establishmentTypeEnum } = require("./enums/establishmentTypeEnum.js");
 const { customerTypeEnum } = require("./enums/customerTypeEnum.js");
 const { importExportEnum } = require("./enums/importExportEnum.js");
 const { waterSupplyEnum } = require("./enums/waterSupplyEnum.js");
+const { businessScaleEnum } = require("./enums/businessScaleEnum.js");
+const { foodTypeEnum } = require("./enums/foodTypeEnum.js");
+const {
+  processingActivitiesEnum
+} = require("./enums/processingActivitiesEnum.js");
 
 module.exports = {
   validateDeclaration,
@@ -83,5 +88,8 @@ module.exports = {
   establishmentTypeEnum,
   customerTypeEnum,
   importExportEnum,
-  waterSupplyEnum
+  waterSupplyEnum,
+  businessScaleEnum,
+  foodTypeEnum,
+  processingActivitiesEnum
 };
