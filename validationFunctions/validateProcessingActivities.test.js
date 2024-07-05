@@ -29,13 +29,9 @@ describe("Function: validateProcessingActivities", () => {
   it("should return false when 'NONE' or 'DONT_KNOW' are combined with other values", () => {
     // Arrange
     const badCombinations = [
-      [processingActivitiesEnum.NONE.key, "VACUUM_PACKING"],
-      [processingActivitiesEnum.DONT_KNOW.key, "SOUS_VIDE"],
-      [
-        processingActivitiesEnum.NONE.key,
-        processingActivitiesEnum.DONT_KNOW.key,
-        "VACUUM_PACKING"
-      ]
+      ["NONE", "VACUUM_PACKING"],
+      ["DONT_KNOW", "SOUS_VIDE"],
+      ["NONE", "DONT_KNOW", "VACUUM_PACKING"]
     ];
 
     // Act & Assert
@@ -47,10 +43,7 @@ describe("Function: validateProcessingActivities", () => {
 
   it("should return true when 'NONE' or 'DONT_KNOW' are the only selected values", () => {
     // Arrange
-    const invalidSelections = [
-      [processingActivitiesEnum.NONE.key],
-      [processingActivitiesEnum.DONT_KNOW.key]
-    ];
+    const invalidSelections = [["NONE"], ["DONT_KNOW"]];
 
     // Act & Assert
     invalidSelections.forEach((selection) => {
@@ -74,14 +67,19 @@ describe("Function: validateProcessingActivities", () => {
     });
   });
 
-  //NEED TO check how to do multiple
-
   it("should return true if input contains only valid values", () => {
     // Arrange
     const validValues = [
-      ["VACUUM_PACKING"],
-      ["SOUS_VIDE"],
-      ["FERMENTING_OR_CURING"]
+      ["VACUUM_PACKING", "SOUS_VIDE"],
+      ["SOUS_VIDE", "FERMENTING_OR_CURING"],
+      [
+        "VACUUM_PACKING",
+        "SOUS_VIDE",
+        "FERMENTING_OR_CURING",
+        "PASTEURISING",
+        "ANIMAL_UNCOOKED",
+        "REWRAPPING_OR_RELABELLING"
+      ]
     ];
 
     // Act & Assert

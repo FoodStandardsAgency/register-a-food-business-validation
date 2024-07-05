@@ -27,9 +27,9 @@ describe("Function: validateBusinessScale", () => {
   it("should return false when 'NONE' or 'DONT_KNOW' are combined with other values", () => {
     // Arrange
     const badCombinations = [
-      [businessScaleEnum.NONE.key, "LOCAL"],
-      [businessScaleEnum.DONT_KNOW.key, "NATIONAL"],
-      [businessScaleEnum.NONE.key, businessScaleEnum.DONT_KNOW.key, "EXPORT"]
+      ["NONE", "LOCAL"],
+      ["DONT_KNOW", "NATIONAL"],
+      ["NONE", "DONT_KNOW", "EXPORT"]
     ];
 
     // Act & Assert
@@ -41,10 +41,7 @@ describe("Function: validateBusinessScale", () => {
 
   it("should return true when 'NONE' or 'DONT_KNOW' are the only selected values", () => {
     // Arrange
-    const invalidSelections = [
-      [businessScaleEnum.NONE.key],
-      [businessScaleEnum.DONT_KNOW.key]
-    ];
+    const invalidSelections = [["NONE"], ["DONT_KNOW"]];
 
     // Act & Assert
     invalidSelections.forEach((selection) => {
@@ -68,11 +65,21 @@ describe("Function: validateBusinessScale", () => {
     });
   });
 
-  //NEED TO check how to do multiple
-
   it("should return true if input contains only valid values", () => {
     // Arrange
-    const validValues = [["LOCAL"], ["NATIONAL"], ["EXPORT"]];
+    const validValues = [
+      ["LOCAL", "NATIONAL"],
+      ["NATIONAL", "ONLINE", "FBO"],
+      [
+        "LOCAL",
+        "NATIONAL",
+        "EXPORT",
+        "ONLINE",
+        "FBO",
+        "SENIOR_YOUTH",
+        "HEALTHCARE"
+      ]
+    ];
 
     // Act & Assert
     validValues.forEach((values) => {

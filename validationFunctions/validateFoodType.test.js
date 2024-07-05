@@ -27,9 +27,9 @@ describe("Function: validateFoodType", () => {
   it("should return false when 'NONE' or 'DONT_KNOW' are combined with other values", () => {
     // Arrange
     const badCombinations = [
-      [foodTypeEnum.NONE.key, "RAW_MEAT_FISH_SHELLFISH"],
-      [foodTypeEnum.DONT_KNOW.key, "READY_TO_EAT"],
-      [foodTypeEnum.NONE.key, foodTypeEnum.DONT_KNOW.key, "COOKED_OR_REHEATED"]
+      ["NONE", "RAW_MEAT_FISH_SHELLFISH"],
+      ["DONT_KNOW", "READY_TO_EAT"],
+      ["NONE", "DONT_KNOW", "COOKED_OR_REHEATED"]
     ];
 
     // Act & Assert
@@ -41,10 +41,7 @@ describe("Function: validateFoodType", () => {
 
   it("should return true when 'NONE' or 'DONT_KNOW' are the only selected values", () => {
     // Arrange
-    const invalidSelections = [
-      [foodTypeEnum.NONE.key],
-      [foodTypeEnum.DONT_KNOW.key]
-    ];
+    const invalidSelections = [["NONE"], ["DONT_KNOW"]];
 
     // Act & Assert
     invalidSelections.forEach((selection) => {
@@ -68,14 +65,17 @@ describe("Function: validateFoodType", () => {
     });
   });
 
-  //NEED TO check how to do multiple
-
   it("should return true if input contains only valid values", () => {
     // Arrange
     const validValues = [
-      ["RAW_MEAT_FISH_SHELLFISH"],
-      ["READY_TO_EAT"],
-      ["COOKED_OR_REHEATED"]
+      ["RAW_MEAT_FISH_SHELLFISH", "READY_TO_EAT"],
+      ["READY_TO_EAT", "IMPORTED"],
+      [
+        "RAW_MEAT_FISH_SHELLFISH",
+        "READY_TO_EAT",
+        "COOKED_OR_REHEATED",
+        "IMPORTED"
+      ]
     ];
 
     // Act & Assert
