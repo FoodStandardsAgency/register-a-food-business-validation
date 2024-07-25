@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.29.4 - 25 July 2024 (released)
+
+- updating Enums for Business Scale as per UAT request
+
 ## v1.29.3 - 05 July 2024 (released)
 
 - updating tests for Business Scale, Food Types and Processing Activities and updating welsh translations
