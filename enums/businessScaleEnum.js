@@ -27,7 +27,7 @@ const businessScaleEnum = {
   FBO: {
     key: "FBO",
     value: {
-      en: "To provide food directly to other businesses",
+      en: "To provide food directly to other food businesses",
       cy: "I ddarparu bwyd yn uniongyrchol i fusnesau bwyd eraill"
     }
   },
