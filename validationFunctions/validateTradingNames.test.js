@@ -4,7 +4,7 @@ describe("Function: validateTradingNames", () => {
   it("Should return false when type is not array", () => {
     // Arrange
     const badTradingNames = ["", {}, null, undefined];
-    // Act
+    //  Act
     badTradingNames.forEach((tradingNames) => {
       // Assert
       const valid = validateTradingNames(tradingNames);

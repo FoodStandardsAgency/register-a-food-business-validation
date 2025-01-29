@@ -4,7 +4,7 @@
  */
 
 /**
- * Runs custom validation on the partners array. It will be true if the supplied argument is an array having between 2 and 5 items with no duplicate partner values.
+ *  Runs custom validation on the partners array. It will be true if the supplied argument is an array having between 2 and 5 items with no duplicate partner values.
  *
  * @param {Object[]} tradingNames The list of partners supplied by the user
  *
