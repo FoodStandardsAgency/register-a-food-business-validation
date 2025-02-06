@@ -33,16 +33,7 @@ describe("Function: validateTradingNames", () => {
     expect(valid).toBe(false);
   });
 
-  it("Should return false if array length is below 1", () => {
-    //Arrange
-    const badTradingNames = [];
-    //Act
-    const valid = validateTradingNames(badTradingNames);
-    //Assert
-    expect(valid).toBe(false);
-  });
-
-  it("Should return true when the array length is between 1-10", () => {
+  it("Should return true when the array length is between 0-10", () => {
     //Arrange
     const goodTradingNames = [
       "mickyds",
@@ -58,11 +49,11 @@ describe("Function: validateTradingNames", () => {
     expect(valid).toBe(true);
   });
 
-  it("Should return true when the array length is exactly 1", () => {
+  it("Should return true when the array is empty length is 0", () => {
     //Arrange
-    const goodTradingNames = ["mickyds"];
+    const emptyTradingNames = [];
     //Act
-    const valid = validateTradingNames(goodTradingNames);
+    const valid = validateTradingNames(emptyTradingNames);
     //Assert
     expect(valid).toBe(true);
   });
