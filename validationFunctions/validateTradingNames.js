@@ -1,5 +1,5 @@
 /**
- * Function for validating the trading names mandatory field
+ * Function for validating the trading names
  * @module functions/validateTradingNames
  */
 
