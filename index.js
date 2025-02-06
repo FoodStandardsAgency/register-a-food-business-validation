@@ -1,5 +1,6 @@
 const validateDeclaration = require("./validationFunctions/validateDeclaration");
 const validateEmail = require("./validationFunctions/validateEmail");
+const validateTradingNames = require("./validationFunctions/validateTradingNames");
 const validateEstablishmentTradingName = require("./validationFunctions/validateEstablishmentTradingName");
 const validateEstablishmentType = require("./validationFunctions/validateEstablishmentType");
 const validateName = require("./validationFunctions/validateName");
@@ -49,6 +50,7 @@ const {
 module.exports = {
   validateDeclaration,
   validateEmail,
+  validateTradingNames,
   validateEstablishmentTradingName,
   validateEstablishmentType,
   validateName,
