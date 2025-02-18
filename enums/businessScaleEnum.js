@@ -22,20 +22,23 @@ const businessScaleEnum = {
   },
   ONLINE: {
     key: "ONLINE",
-    value: { en: "To provide food online", cy: "I ddarparu bwyd ar-lein" }
+    value: {
+      en: "To provide food online",
+      cy: "I’r sawl sy’n dymuno prynu bwyd ar-lein"
+    }
   },
   FBO: {
     key: "FBO",
     value: {
       en: "To provide food directly to other food businesses",
-      cy: "I ddarparu bwyd yn uniongyrchol i fusnesau bwyd eraill"
+      cy: "Yn uniongyrchiol i fusnesau bwyd eraill"
     }
   },
   SENIOR_YOUTH: {
     key: "SENIOR_YOUTH",
     value: {
-      en: "To those under 5 years old or over 65 years old",
-      cy: "I’r rhai dan 5 oed a/neu dros 65 oed"
+      en: "To provide food mostly to those under 5 years old or over 65 years old",
+      cy: "I’r rhai dan 5 oed a/neu dros 65 oed yn bennaf"
     }
   },
   HEALTHCARE: {
