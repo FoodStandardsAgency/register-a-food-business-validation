@@ -2,7 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
+## v1.30.1 - 18 February 2025 (released)
 
+- update Welsh translations
+  
 ## v1.30.0 - 06 February 2025 (released)
 
 - added validation for additional trading names
