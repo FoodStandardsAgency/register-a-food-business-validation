@@ -1,8 +1,8 @@
 # Contributing to this repository
 
-To contribute to this repository, you must use clone the [register-a-food-business-validation package](https://github.com/FoodStandardsAgency/register-a-food-business-validation). To use it you must install it as an npm package in your repositary using `npm i register-a-food-business-service`.
+To contribute to this repository, you must clone the [register-a-food-business-validation package](https://github.com/FoodStandardsAgency/register-a-food-business-validation). To use it you must install it as an npm package in your repository using `npm i register-a-food-business-service`.
 
-It is recommended that you install the Prettier code-formatting extension for your IDE. For more information about using the Prettier extension, see the [Best practices and code standards]() contribution guide.
+It is recommended that you install the Prettier code-formatting extension for your IDE.
 
 ## Detailed contribution guides
 
