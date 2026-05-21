@@ -4,7 +4,7 @@ Some of the validation functions created are generic e.g. phone number or email 
 
 ## Steps:
 
-1.  Import the validator function to be used
+1.  Import the validator function you need.
 
 ```javascript
 const { functionToBeUsed } = require("validator")
