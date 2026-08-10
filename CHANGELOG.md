@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
+## v1.30.3 - 10 August 2026 (unreleased)
+
+- reject impossible calendar dates (e.g. 30 February, 31 June) in validateDate by enabling strict ISO 8601 checking
+
 ## v1.30.1 - 18 February 2025 (released)
 
 - update Welsh translations
