@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slice-and-dice/register-a-food-business-validation.git"
+    "url": "git+https://github.com/FoodStandardsAgency/register-a-food-business-validation.git"
   },
   "author": "Django Shelton",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/slice-and-dice/register-a-food-business-validation/issues"
+    "url": "https://github.com/FoodStandardsAgency/register-a-food-business-validation/issues"
   },
-  "homepage": "https://github.com/slice-and-dice/register-a-food-business-validation#readme",
+  "homepage": "https://github.com/FoodStandardsAgency/register-a-food-business-validation#readme",
   "dependencies": {
     "axios": "^1.11.0",
     "moment": "^2.30.1",
